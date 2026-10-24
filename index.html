@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erciş Rehberi | Şehrini Keşfet</title>
+<meta name="description" content="Erciş’in işletmelerini, lezzet duraklarını, hizmetlerini ve güncel hava durumunu tek yerde keşfet.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#14263b">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#f7f9ff 0%,#f1f5fb 55%,#f8fafc 100%);color:#18243a}
+:root{--navy:#111d36;--blue:#4567f5;--cyan:#43c6d9;--muted:#718096;--line:#e4eaf4;--shadow:0 12px 32px #192d4a0c}
+.topbar{min-height:76px;background:rgba(15,27,51,.97);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px clamp(16px,3vw,42px);gap:20px;position:sticky;top:0;z-index:20;box-shadow:0 8px 28px #0b20301c;backdrop-filter:blur(14px)}
+.brand{display:flex;align-items:center;gap:12px;font-size:clamp(20px,3vw,29px);font-weight:900;letter-spacing:-.7px;white-space:nowrap}.pin{font-size:32px;color:#1688f5}.brand small{font-size:12px;line-height:1.4;font-weight:500;color:#c6d3e2;margin-left:12px;max-width:170px;white-space:normal}
+.theme-toggle{border:1px solid #ffffff35;background:#ffffff12;color:#fff;border-radius:11px;padding:9px 11px;font-size:12px;font-weight:800;cursor:pointer}.topnav{display:flex;gap:clamp(12px,2vw,25px);align-items:center;color:#d7e2ee;font-size:13px;font-weight:750}.topnav a{color:inherit;text-decoration:none;transition:color .2s}.topnav a:hover{color:#73dcf1}
+.hero{min-height:290px;position:relative;display:flex;align-items:center;padding:42px clamp(18px,4vw,60px);background:linear-gradient(105deg,rgba(9,21,45,.93) 0%,rgba(21,48,92,.78) 48%,rgba(24,87,126,.35) 100%),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85') center 48%/cover no-repeat;color:white;overflow:hidden}.hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-90px;top:-220px;border:1px solid #ffffff22;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06;pointer-events:none}.hero-content{width:min(920px,100%);position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#ffffff18;border:1px solid #ffffff30;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800;letter-spacing:.5px;margin-bottom:13px;backdrop-filter:blur(8px)}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.06;letter-spacing:-1.6px;margin:0 0 12px;font-weight:950;text-shadow:0 2px 14px #08152c70}.hero p{margin:0 0 23px;font-size:clamp(14px,2vw,17px);font-weight:550;color:#e3ebfa;max-width:650px;line-height:1.6}.search-wrap{display:flex;max-width:730px;background:#fff;border:1px solid #ffffff90;border-radius:16px;padding:5px;box-shadow:0 14px 35px #001d3d45}.search{width:100%;min-width:0;padding:15px 16px;border:0;border-radius:12px;font-size:15px;outline:none;color:#22364b;background:transparent}.search:focus{box-shadow:inset 0 0 0 2px #dbe7ff}.search-btn{border:0;border-radius:12px;padding:0 24px;background:linear-gradient(135deg,#4d6df8,#2865df);color:white;font-weight:850;font-size:14px;cursor:pointer;box-shadow:0 5px 14px #345de940;transition:transform .2s}.search-btn:hover{transform:translateY(-1px)}
+.panel{max-width:1500px;margin:0 auto;padding:24px clamp(14px,2.6vw,36px) 42px}.weather-card{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;margin:0 0 24px;padding:22px 24px;border-radius:22px;background:linear-gradient(120deg,#172747,#234b7b 72%,#287e9b);color:white;box-shadow:0 18px 42px #1d46721c;position:relative;overflow:hidden}.weather-card:after{content:"";position:absolute;width:220px;height:220px;right:-80px;bottom:-150px;border-radius:50%;background:#70e3ed20}.weather-main,.weather-side{position:relative;z-index:1}.weather-label{font-size:12px;font-weight:850;letter-spacing:1px;text-transform:uppercase;color:#b6d6f8}.weather-current{display:flex;align-items:center;gap:15px;margin-top:8px}.weather-icon{font-size:54px;filter:drop-shadow(0 5px 5px #06142b40)}.weather-temp{font-size:clamp(35px,4vw,48px);font-weight:900;letter-spacing:-1.5px;line-height:1}.weather-desc{font-size:14px;color:#dceafa;margin-top:5px}.weather-stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:12px;color:#d7e8fb}.weather-stats span{background:#ffffff12;border:1px solid #ffffff14;border-radius:10px;padding:8px 10px}.weather-side{display:flex;flex-direction:column;justify-content:center}.forecast-title{font-size:12px;color:#c6dcf6;font-weight:800;margin-bottom:10px}.forecast{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.forecast-day{background:#ffffff12;border:1px solid #ffffff15;border-radius:14px;padding:12px 8px;text-align:center}.forecast-day b{display:block;font-size:12px;color:#d6e9fb}.forecast-day .ficon{font-size:24px;margin:5px 0;display:block}.forecast-day strong{font-size:13px}.weather-updated{font-size:10px;color:#b9d2ed;margin-top:10px}.quick-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 25px}.stat-tile{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow)}.stat-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#eef2ff;font-size:21px}.stat-tile strong{display:block;font-size:19px;letter-spacing:-.4px}.stat-tile small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:10px 0 15px}.section-heading h2{font-size:clamp(20px,3vw,25px);letter-spacing:-.6px;margin:0}.section-heading p{font-size:12px;color:var(--muted);margin:5px 0 0}
+.categories{display:flex;gap:12px;overflow-x:auto;padding:0 0 22px;scrollbar-width:thin}.categories button{flex:0 0 auto;min-width:100px;border:1px solid #e7edf4;background:#fff;padding:12px 14px;border-radius:16px;white-space:nowrap;font-weight:750;cursor:pointer;color:#43566d;box-shadow:0 5px 16px #122b4208;transition:all .2s}.categories button{font-size:13px}
+/* Real 3D-style category assets from Microsoft Fluent Emoji */
+.emoji3d{display:inline-flex;align-items:center;justify-content:center;vertical-align:-.12em;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-size:1.42em;line-height:1;margin-right:5px;filter:drop-shadow(0 2px 1px #142a4430) drop-shadow(0 4px 3px #142a441c);text-shadow:0 1px 0 #ffffffaa,0 2px 0 #182b421a;transform:translateY(-1px);}
+.categories .emoji3d{font-size:1.8em;display:flex;margin:0 auto 8px;min-height:38px;filter:drop-shadow(0 3px 1px #142a4440) drop-shadow(0 6px 4px #142a4420);}
+.emoji3d-img{width:1.65em;height:1.65em;object-fit:contain;vertical-align:middle;display:inline-block;margin-right:5px;filter:drop-shadow(0 3px 2px #142a4428)}
+.categories .emoji3d-img{width:58px;height:58px;display:block;margin:0 auto 7px;filter:drop-shadow(0 5px 4px #142a4430)}
+.categories button{font-size:14px;display:flex;align-items:center;gap:5px;}
+.categories button.active,.categories button:hover{border-color:#b9dcff;background:#edf7ff;color:#087fea}.count{font-weight:800;font-size:20px;margin:0 2px 16px;color:#1b2c42}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.card{background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 3px 12px #1b3c5a12;border:1px solid #e4ebf2;transition:transform .16s,box-shadow .16s;min-width:0}.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px #1b3c5a1b}.image-wrap{position:relative;background:#eaf2f8}.card-img{display:block;width:100%;height:165px;object-fit:cover;object-position:center;background:#eaf1f4;aspect-ratio:15/8}.rating-badge{position:absolute;right:8px;top:8px;background:#fff;border-radius:7px;padding:5px 7px;font-size:12px;font-weight:800;color:#30445b;box-shadow:0 2px 7px #0002}.rating-badge b{color:#f2a900}.card-body{padding:11px 12px 12px}.card h3{margin:0 0 5px;font-size:16px;line-height:1.3;color:#17283d}.desc{color:#75869b;font-size:12px;min-height:16px}.address{font-size:12px;color:#50657d;line-height:1.45;margin-top:8px;min-height:30px}.rating{font-weight:700;margin:7px 0;color:#61738a;font-size:12px}.actions{display:flex;gap:7px;margin-top:10px}.actions a{flex:1;text-align:center;text-decoration:none;padding:9px 7px;border-radius:9px;font-weight:800;font-size:12px;white-space:nowrap}.map{background:#087fea;color:white}.phone{background:#12ad78;color:white}.no-phone{background:#eef2f5;color:#647487}.empty{padding:30px;text-align:center;color:#61738a;background:#fff;border-radius:12px}footer{text-align:center;padding:24px;color:#72849a;font-size:12px;background:#f7fafd;border-top:1px solid #e7eef5}
+.categories button.active,.categories button:hover{border-color:#b9c8ff;background:linear-gradient(135deg,#eef2ff,#effbff);color:#3858db;transform:translateY(-2px);box-shadow:0 8px 18px #4567f51a}.count{font-weight:850;font-size:18px;margin:0;color:#1b2c42}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.card{background:#fff;border-radius:19px;overflow:hidden;box-shadow:0 5px 18px #1b3c5a0c;border:1px solid #e6ebf4;transition:transform .22s,box-shadow .22s,border-color .22s;min-width:0}.card:hover{transform:translateY(-5px);box-shadow:0 16px 34px #1b3c5a19;border-color:#d2dcf3}.image-wrap{position:relative;background:#eaf2f8;overflow:hidden}.card-img{display:block;width:100%;height:190px;object-fit:cover;object-position:center;background:#eaf1f4;aspect-ratio:15/8;transition:transform .5s}.card:hover .card-img{transform:scale(1.035)}.rating-badge{position:absolute;right:10px;top:10px;background:#fff;border:1px solid #ffffff90;border-radius:10px;padding:6px 9px;font-size:12px;font-weight:850;color:#30445b;box-shadow:0 4px 12px #0002;backdrop-filter:blur(8px)}.rating-badge b{color:#f2a900}.favorite-btn{position:absolute;left:10px;top:10px;border:1px solid #ffffffa0;background:#ffffffed;color:#61718b;width:34px;height:34px;border-radius:11px;font-size:18px;cursor:pointer;box-shadow:0 3px 10px #0002}.favorite-btn.saved{color:#e14b72;background:#fff0f4}.card-body{padding:14px 14px 15px}.card h3{margin:0 0 6px;font-size:16px;line-height:1.35;color:#17283d;letter-spacing:-.2px}.desc{color:#75869b;font-size:12px;min-height:16px}.address{font-size:12px;color:#50657d;line-height:1.5;margin-top:9px;min-height:34px}.rating{font-weight:750;margin:8px 0;color:#61738a;font-size:12px}.actions{display:flex;gap:8px;margin-top:12px}.actions a{flex:1;text-align:center;text-decoration:none;padding:10px 7px;border-radius:11px;font-weight:850;font-size:11px;white-space:nowrap;transition:filter .2s,transform .2s}.actions a:hover{filter:brightness(.96);transform:translateY(-1px)}.map{background:#edf2ff;color:#3858d9}.phone{background:#e7faf2;color:#087b55}.no-phone{background:#eef2f5;color:#647487}.empty{padding:35px;text-align:center;color:#61738a;background:#fff;border:1px dashed #d5deed;border-radius:16px;grid-column:1/-1}footer{text-align:center;padding:28px 18px;color:#72849a;font-size:12px;background:#f7fafd;border-top:1px solid #e7eef5;line-height:1.8}.tools-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 18px}.tools-left{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.tool-select,.tool-button{border:1px solid #dfe6f1;background:#fff;color:#465772;border-radius:11px;padding:10px 12px;font-weight:750;font-size:12px;cursor:pointer}.tool-button.active{background:#fff0f4;border-color:#f5c4d1;color:#c53d62}.result-label{font-size:12px;color:#78879b;font-weight:700}
+body.dark{background:#0d1424;color:#e7edf8}body.dark .panel{color:#e7edf8}body.dark .stat-tile,body.dark .card,body.dark .categories button,body.dark .tool-select,body.dark .tool-button,body.dark .empty{background:#172238;border-color:#293750;color:#e7edf8}body.dark .card h3,body.dark .count,body.dark .section-heading h2,body.dark .stat-tile strong{color:#f2f6ff}body.dark .desc,body.dark .address,body.dark .rating,body.dark .stat-tile small,body.dark .section-heading p,body.dark .result-label{color:#a9b8cf}body.dark .categories button.active,body.dark .categories button:hover{background:#25365c;color:#a9bcff;border-color:#5069bd}body.dark footer{background:#101a2d;border-color:#293750;color:#a9b8cf}body.dark .map{background:#27385d;color:#cbd7ff}body.dark .phone{background:#153e35;color:#8be5c3}body.dark .no-phone{background:#29364a;color:#c1ccdb}body.dark .favorite-btn{background:#172238;color:#cbd5e1;border-color:#40506b}body.dark .favorite-btn.saved{color:#ff7b9c}body.dark .tool-button.active{background:#48243a;color:#ff9bb5;border-color:#81405d}
+
+.hero-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.hero-links a,.hero-links button{display:inline-flex;align-items:center;gap:7px;padding:10px 13px;border-radius:11px;border:1px solid #ffffff38;background:#ffffff16;color:#fff;text-decoration:none;font-size:12px;font-weight:800;cursor:pointer;backdrop-filter:blur(8px)}.hero-links a:hover,.hero-links button:hover{background:#ffffff2a}
+.local-highlights{margin:0 0 25px;padding:22px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,#fff,#f4f8ff);box-shadow:var(--shadow)}.highlight-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:15px}.highlight-head h2{margin:4px 0;font-size:22px;letter-spacing:-.6px}.highlight-head p{margin:4px 0 0;color:var(--muted);font-size:12px}.highlight-head>a{color:#4567f5;text-decoration:none;font-weight:850;font-size:12px;white-space:nowrap}.mini-eyebrow{font-size:10px;letter-spacing:1.2px;font-weight:900;color:#4567f5}.highlight-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.highlight-card{min-width:0;text-align:left;padding:15px;border:1px solid #e5ebf5;border-radius:16px;background:#fff;color:#1c2e48;cursor:pointer;box-shadow:0 5px 14px #142c4508;transition:transform .2s,box-shadow .2s}.highlight-card:hover{transform:translateY(-3px);box-shadow:0 12px 22px #142c4514}.big-emoji{display:block;font-size:30px;margin-bottom:10px;filter:drop-shadow(0 4px 3px #172d4425)}.highlight-card b{display:block;font-size:13px}.highlight-card small{display:block;color:#718096;font-size:11px;margin-top:4px}.advanced-filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:-4px 0 18px;padding:13px;border:1px solid var(--line);background:#f9fbff;border-radius:15px}.advanced-filters label{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;color:#566780}.advanced-filters .tool-select{padding:9px 10px}.check-filter input{accent-color:#4567f5;width:16px;height:16px}.report-btn{flex:1;border:1px solid #f1d9ab;background:#fff8e8;color:#8a5a08;border-radius:10px;padding:9px 5px;font-weight:850;font-size:11px;cursor:pointer}.actions a.route{background:#e7f7fa;color:#087a8c}.image-wrap .favorite-btn{position:absolute;left:10px;top:10px;z-index:2;width:35px;height:35px;border:1px solid #ffffffb0;border-radius:50%;background:#ffffffed;color:#c43b61;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 4px 12px #07152a25}.image-wrap .favorite-btn.saved{background:#fff0f4;color:#d5295b}.modal-backdrop{position:fixed;inset:0;z-index:100;background:#071426b8;display:grid;place-items:center;padding:16px;backdrop-filter:blur(5px)}.modal-backdrop[hidden]{display:none}.report-modal{position:relative;width:min(560px,100%);max-height:90vh;overflow:auto;background:#fff;color:#17283d;border-radius:22px;padding:26px;box-shadow:0 25px 80px #0005}.report-modal h2{margin:5px 0 4px;font-size:24px}.report-modal>p{font-size:12px;color:#6f8095;line-height:1.5}.report-business-name{font-weight:850;color:#3457d5!important}.modal-close{position:absolute;right:15px;top:12px;border:0;background:#eef2f8;border-radius:50%;width:34px;height:34px;font-size:24px;cursor:pointer;color:#35445a}.report-modal form{display:grid;gap:13px}.report-modal label{display:grid;gap:6px;font-size:12px;font-weight:800}.report-modal input,.report-modal select,.report-modal textarea{width:100%;border:1px solid #dce4f0;border-radius:10px;padding:11px;font:inherit;font-size:13px;background:#fbfcff;color:#18243a}.report-modal textarea{resize:vertical}.report-modal .search-btn{min-height:43px}.report-note{border-top:1px solid #edf0f6;padding-top:12px!important;font-size:11px!important}.report-modal #copyStatus{font-size:12px;color:#087b55;font-weight:800;margin-left:8px}
+body.dark .local-highlights,body.dark .advanced-filters{background:#131e32;border-color:#293750}body.dark .highlight-card{background:#19263d;border-color:#293750;color:#f2f6ff}body.dark .highlight-card small,body.dark .highlight-head p,body.dark .advanced-filters label{color:#a9b8cf}body.dark .highlight-head h2{color:#f2f6ff}body.dark .report-modal{background:#172238;color:#f2f6ff}body.dark .report-modal input,body.dark .report-modal select,body.dark .report-modal textarea{background:#101a2d;color:#f2f6ff;border-color:#34445f}body.dark .report-btn{background:#45351f;color:#ffd88a;border-color:#68502d}body.dark .actions a.route{background:#153b46;color:#a4f0fa}
+@media(max-width:760px){.highlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.local-highlights{padding:16px}.highlight-head{align-items:start}.advanced-filters{align-items:stretch}.advanced-filters label{flex:1 1 45%;justify-content:space-between}.advanced-filters .tool-select{max-width:60%}.hero-links a,.hero-links button{font-size:11px;padding:9px 10px}.report-modal{padding:22px 18px}}
+
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.topnav{gap:14px}.card-img{height:170px}}
+@media(max-width:760px){.topbar{height:auto;min-height:64px;padding:12px 16px}.brand small,.topnav{display:none}.hero{min-height:250px;padding:30px 18px}.hero p{font-size:14px}.weather-card{grid-template-columns:1fr;padding:19px;gap:18px}.weather-side{border-top:1px solid #ffffff22;padding-top:15px}.quick-stats{gap:8px}.stat-tile{padding:11px 9px;gap:8px}.stat-icon{width:34px;height:34px;font-size:17px;border-radius:10px}.stat-tile strong{font-size:16px}.stat-tile small{font-size:10px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card-img{height:145px}.card-body{padding:11px}.card h3{font-size:14px}.address{font-size:11px}.actions{gap:6px}.actions a{font-size:10px;padding:9px 4px}.panel{padding:16px 12px 28px}.categories{gap:8px}.categories button{min-width:auto;padding:10px 12px}.count{font-size:16px}.section-heading{align-items:start;flex-direction:column}.tools-row{align-items:stretch}.tools-left{width:100%}.tool-select,.tool-button{flex:1}}
+@media(max-width:420px){.grid{grid-template-columns:1fr 1fr}.card-img{height:118px}.actions{flex-direction:column}.actions a{width:100%}.search-btn{padding:0 15px}.weather-current{gap:10px}.weather-icon{font-size:42px}.weather-stats{gap:6px}.weather-stats span{padding:7px}.forecast-day{padding:10px 4px}.stat-tile{align-items:flex-start;flex-direction:column}.stat-icon{width:30px;height:30px}.stat-tile strong{font-size:15px}}
+
+/* Erciş Rehberi — Yerel Yaşam Merkezi */
+.life-hub{margin:26px 0 30px;padding:clamp(16px,2.5vw,26px);border:1px solid #dfe8f6;border-radius:24px;background:linear-gradient(145deg,#fff 0%,#f5f9ff 65%,#f0fbff 100%);box-shadow:0 12px 30px #203b5d0b}
+.life-hub-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;margin-bottom:18px}.life-hub-head h2{margin:5px 0;font-size:clamp(22px,3vw,29px);letter-spacing:-.7px}.life-hub-head p{margin:0;color:#687b94;font-size:13px;line-height:1.55}.life-tag{font-size:10px;font-weight:900;letter-spacing:1px;color:#4567df}.life-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.life-tile{min-height:120px;text-align:left;border:1px solid #e0e8f4;border-radius:17px;background:#fff;padding:15px;cursor:pointer;color:#263852;box-shadow:0 4px 14px #233b5b08;transition:transform .18s,border-color .18s,box-shadow .18s}.life-tile:hover,.life-tile:focus-visible{transform:translateY(-3px);border-color:#a9c4ff;box-shadow:0 10px 22px #365c9b16;outline:none}.life-tile .life-icon{font-size:28px;display:block;margin-bottom:9px}.life-tile b{display:block;font-size:14px;margin-bottom:4px}.life-tile small{font-size:11px;color:#73839a;line-height:1.4;display:block}.life-workspace{margin-top:16px;border:1px solid #e0e8f4;border-radius:18px;background:#fff;padding:clamp(14px,2vw,22px);min-height:100px}.life-workspace h3{margin:0 0 7px;font-size:20px}.life-workspace p{color:#6d7e94;font-size:13px;line-height:1.55}.life-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.life-form label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:800;color:#43536a}.life-form input,.life-form select,.life-form textarea{width:100%;border:1px solid #dce4f0;border-radius:10px;padding:11px 12px;font:inherit;font-size:13px;background:#fff;color:#23344c;min-width:0}.life-form textarea{min-height:84px;resize:vertical}.life-form .wide{grid-column:1/-1}.life-action{border:0;border-radius:11px;background:linear-gradient(135deg,#496bf3,#2678db);color:#fff;font-weight:850;padding:12px 16px;cursor:pointer}.life-secondary{border:1px solid #dbe4f1;border-radius:10px;background:#f7f9fd;color:#425571;font-weight:800;padding:10px 13px;cursor:pointer}.life-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}.life-item{border:1px solid #e3eaf4;border-radius:13px;padding:13px;background:#fbfcff}.life-item b{display:block;margin-bottom:5px;color:#253752}.life-item small{display:block;color:#72829a;line-height:1.5}.life-item p{margin:7px 0;color:#53647c;white-space:pre-wrap}.life-note{border-radius:11px;background:#fff7e6;color:#77521a;padding:10px 12px;font-size:12px;line-height:1.5;margin-top:12px}.life-status{font-size:12px;font-weight:750;color:#087b55;margin-top:9px;min-height:16px}.life-business-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #edf1f7}.life-business-row:last-child{border-bottom:0}.life-business-row b{font-size:13px}.life-business-row small{display:block;color:#75859a;font-size:11px;margin-top:3px}.life-business-row a{font-size:12px;text-decoration:none;font-weight:850;color:#3e62dc;white-space:nowrap}
+@media(max-width:900px){.life-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.life-tile{min-height:108px}.life-list{grid-template-columns:1fr}}
+@media(max-width:560px){.life-hub-head{align-items:flex-start;flex-direction:column}.life-form{grid-template-columns:1fr}.life-form .wide{grid-column:auto}.life-grid{gap:8px}.life-tile{padding:12px}.life-tile .life-icon{font-size:25px}}
+body.dark .life-hub,body.dark .life-workspace,body.dark .life-tile,body.dark .life-item{background:#151f32;border-color:#2b3951;color:#e7edf8}body.dark .life-tile b,body.dark .life-item b,body.dark .life-workspace h3{color:#e7edf8}body.dark .life-form input,body.dark .life-form select,body.dark .life-form textarea{background:#10192a;border-color:#35445d;color:#e7edf8}body.dark .life-note{background:#3b2d18;color:#f6d99c}
+
+
+/* Premium Erciş Rehberi açılış animasyonu */
+body.intro-lock{overflow:hidden}#ercisIntro{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 42%,#142f53 0%,#08172c 48%,#030914 100%);color:#fff;opacity:1;visibility:visible;transition:opacity .8s ease,visibility .8s ease;font-family:inherit;isolation:isolate}
+#ercisIntro::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent 0 25%,#b8d8ff0a 29%,transparent 34% 60%,#d9b76c0b 68%,transparent 75%);animation:introAmbient 18s linear infinite;pointer-events:none}
+#ercisIntro::after{content:"";position:absolute;width:min(78vw,620px);aspect-ratio:1;border:1px solid #c5d9f51c;border-radius:50%;box-shadow:0 0 0 34px #c5d9f508,0 0 0 72px #c5d9f505;animation:introRing 4s ease-in-out infinite;pointer-events:none}
+#ercisIntro.intro-hide{opacity:0;visibility:hidden;pointer-events:none}
+/* Guvenlik yedegi: acilis JavaScripti takilsa bile giris ekrani sonsuza kadar kalmasin. */
+@keyframes introFailsafe{0%,89%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden;pointer-events:none}}
+#ercisIntro:not(.intro-hide){animation:introFailsafe 14.5s linear forwards}
+.intro-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;padding:24px;animation:introRise 1s cubic-bezier(.2,.75,.2,1) both}
+.intro-kicker{font-size:10px;letter-spacing:.42em;color:#a9c4e6;text-transform:uppercase;margin-bottom:25px;opacity:0;animation:introFade .7s .2s forwards}
+.intro-emblem{position:relative;display:flex;align-items:center;justify-content:center;gap:clamp(0px,1.1vw,9px);font-weight:900;font-size:clamp(48px,12vw,104px);letter-spacing:-.075em;line-height:1;padding:8px 4px 0;filter:drop-shadow(0 12px 26px #0008);transform-origin:50% 72%;animation:introZoom 12s 1.1s cubic-bezier(.52,.02,.28,1) forwards}
+.intro-letter{display:inline-block;color:#f7f9ff;text-shadow:0 2px 0 #a7b9d3,0 0 24px #d6e6ff27;animation:letterReveal .65s both}
+.intro-letter:nth-child(1){animation-delay:.2s}.intro-letter:nth-child(2){animation-delay:.35s}.intro-letter:nth-child(3){animation-delay:.5s}.intro-letter:nth-child(4){animation-delay:.65s}.intro-letter:nth-child(5){animation-delay:.8s}
+.intro-letter.red{color:#f04452;text-shadow:0 2px 0 #941f2a,0 0 28px #ff334c55}
+.intro-mark{position:relative;width:clamp(210px,58vw,410px);height:clamp(100px,24vw,165px);margin-top:-2px;transform-origin:73% 5%;animation:markZoom 12s 1.1s cubic-bezier(.52,.02,.28,1) forwards}
+.intro-mark svg{width:100%;height:100%;overflow:visible}
+.intro-path{fill:none;stroke:url(#introGold);stroke-width:2.3;stroke-linecap:round;stroke-dasharray:460;stroke-dashoffset:460;animation:drawPath 4.2s 1.05s ease forwards}
+.intro-star{transform-origin:0 0;filter:drop-shadow(0 0 5px #ffe7a0);animation:starPulse 1.8s 4.2s ease-in-out infinite;}
+.intro-star-core{fill:#fff3bd;stroke:#fff;stroke-width:1.4}
+.intro-glint{position:absolute;left:73%;top:5%;width:7px;height:7px;border-radius:50%;background:#fff7d0;box-shadow:0 0 12px 5px #ffd76c,0 0 42px 18px #eabf5b55;opacity:0;animation:glintHit 1.5s 11.2s ease-out forwards}
+.intro-title{font-size:clamp(15px,3.8vw,22px);font-weight:750;letter-spacing:.12em;margin-top:5px;opacity:0;animation:introFade .8s .75s forwards}
+.intro-subtitle{font-size:12px;letter-spacing:.08em;color:#a9bfdc;margin-top:12px;opacity:0;animation:introFade .8s 1s forwards}
+.intro-progress{width:clamp(130px,34vw,210px);height:2px;background:#ffffff20;border-radius:4px;margin-top:29px;overflow:hidden;opacity:0;animation:introFade .5s 1s forwards}
+.intro-progress span{display:block;width:100%;height:100%;background:linear-gradient(90deg,#7da7e8,#f7d98c,#fff);transform:translateX(-101%);animation:progressRun 11.5s 1s ease-in-out forwards}
+.intro-skip{position:absolute;z-index:4;right:20px;bottom:calc(22px + env(safe-area-inset-bottom));border:1px solid #ffffff38;border-radius:30px;background:#ffffff0b;color:#e8effa;padding:10px 16px;font-size:12px;letter-spacing:.04em;backdrop-filter:blur(12px);cursor:pointer;transition:background .2s,border-color .2s}
+.intro-skip:hover{background:#ffffff18;border-color:#ffffff70}
+.intro-corner{position:absolute;width:34px;height:34px;border-color:#e7c77a55;border-style:solid;opacity:.7}
+.intro-corner.tl{top:22px;left:22px;border-width:1px 0 0 1px}.intro-corner.tr{top:22px;right:22px;border-width:1px 1px 0 0}.intro-corner.bl{bottom:22px;left:22px;border-width:0 0 1px 1px}.intro-corner.br{bottom:22px;right:22px;border-width:0 1px 1px 0}
+@keyframes introAmbient{to{transform:rotate(360deg)}}
+@keyframes introRing{0%,100%{transform:scale(.92);opacity:.42}50%{transform:scale(1.04);opacity:.8}}
+@keyframes introRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes introFade{to{opacity:1}}
+@keyframes letterReveal{from{opacity:0;transform:translateY(20px) scale(.85);filter:blur(8px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes introZoom{0%,58%{transform:scale(1)}100%{transform:scale(1.14)}}
+@keyframes markZoom{0%,64%{transform:scale(1)}100%{transform:scale(3.5) translate(-7%,3%)}}
+@keyframes drawPath{to{stroke-dashoffset:0}}
+@keyframes starPulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.24);opacity:1}}
+@keyframes glintHit{0%{opacity:0;transform:scale(.1)}30%{opacity:1;transform:scale(1.5)}100%{opacity:0;transform:scale(5)}}
+@keyframes progressRun{0%{transform:translateX(-101%)}70%{transform:translateX(-8%)}100%{transform:translateX(0)}}
+@media(max-width:480px){.intro-kicker{font-size:8px;letter-spacing:.3em}.intro-subtitle{max-width:260px;line-height:1.6}.intro-corner{width:22px;height:22px}.intro-corner.tl{top:14px;left:14px}.intro-corner.tr{top:14px;right:14px}.intro-corner.bl{bottom:14px;left:14px}.intro-corner.br{bottom:14px;right:14px}}
+/* Açılış animasyonu, cihazın hareket azaltma ayarından etkilenmeden tam süresinde oynar. */
+
+
+/* Erciş Rehberi mini müzik çalar */
+.music-dock{position:fixed;right:14px;bottom:14px;z-index:9998;font-family:inherit;color:#f8fafc}
+.music-toggle{display:flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:11px 15px;background:linear-gradient(135deg,#0b2545,#123b35);color:#fff;box-shadow:0 10px 30px #00152c45;font-weight:700;cursor:pointer}
+.music-toggle .music-note{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#ffffff18;font-size:17px}
+.music-panel{display:none;width:min(310px,calc(100vw - 28px));margin-bottom:10px;padding:14px;border:1px solid #ffffff24;border-radius:18px;background:rgba(7,24,45,.97);box-shadow:0 18px 45px #00152c66;backdrop-filter:blur(16px)}
+.music-panel.open{display:block}.music-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.music-heading strong{font-size:14px}.music-heading small{display:block;color:#b8c8dc;font-size:12px;margin-top:3px}.music-close{border:0;background:#ffffff12;color:white;border-radius:9px;padding:6px 10px;font-size:18px;cursor:pointer}
+.music-video-wrap{width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:11px;background:#10233b;margin-bottom:12px}.music-video-wrap iframe{width:100%;height:100%;border:0}.music-actions{display:flex;gap:8px;margin-bottom:12px}.music-actions button{flex:1;border:1px solid #ffffff20;background:#ffffff12;color:#fff;border-radius:10px;padding:9px 8px;cursor:pointer}.music-volume{display:flex;align-items:center;gap:9px;font-size:13px}.music-volume input{min-width:0;flex:1;accent-color:#69d5b0}.music-volume output{width:34px;text-align:right;color:#d3e4f5;font-variant-numeric:tabular-nums}.music-status{font-size:11px;color:#b8c8dc;margin-top:9px;line-height:1.4}
+@media(max-width:480px){.music-dock{right:10px;bottom:10px}.music-toggle{padding:9px 12px}.music-panel{width:min(300px,calc(100vw - 20px))}}
+
+</style>
+</head>
+<body>
+
+<div id="ercisIntro" role="dialog" aria-label="Erciş Rehberi açılışı" aria-modal="true">
+  <span class="intro-corner tl"></span><span class="intro-corner tr"></span><span class="intro-corner bl"></span><span class="intro-corner br"></span>
+  <div class="intro-content">
+    <div class="intro-kicker">VAN • ERCİŞ • YERELİN KALBİ</div>
+    <div class="intro-emblem" aria-label="ER C İ Ş"><span class="intro-letter">E</span><span class="intro-letter">R</span><span class="intro-letter red">C</span><span class="intro-letter">İ</span><span class="intro-letter">Ş</span></div>
+    <div class="intro-mark" aria-hidden="true"><svg viewBox="0 0 410 165" role="presentation"><defs><linearGradient id="introGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1bc"/><stop offset=".48" stop-color="#d4a94f"/><stop offset="1" stop-color="#fff3c7"/></linearGradient><radialGradient id="introStarGlow"><stop offset="0" stop-color="#fffbe8"/><stop offset=".4" stop-color="#f6d77f"/><stop offset="1" stop-color="#d4a94f" stop-opacity="0"/></radialGradient></defs><path class="intro-path" d="M18 16 C92 38 125 48 178 63 S278 83 315 115"/><path class="intro-path" style="animation-delay:2.7s;stroke-width:1;opacity:.65" d="M25 33 C103 56 166 69 235 82 S294 99 315 115"/><g class="intro-star" transform="translate(315 115)"><circle r="34" fill="url(#introStarGlow)"/><path class="intro-star-core" d="M0-20 L4.8-5.8 20 0 4.8 4.8 0 20 -4.8 4.8 -20 0 -4.8-5.8Z"/><path d="M0-13 L3-3.5 13 0 3 3 0 13 -3 3 -13 0 -3-3.5Z" fill="#dcae4d"/></g></svg><span class="intro-glint"></span></div>
+    <div class="intro-title">ERCİŞ REHBERİ</div><div class="intro-subtitle">Şehrini keşfet. Yerelini yaşa.</div>
+    <div class="intro-progress"><span></span></div>
+  </div>
+  <button class="intro-skip" id="introSkip" type="button">Atla <span aria-hidden="true">↗</span></button>
+</div>
+<script>
+(function(){
+ const intro=document.getElementById('ercisIntro');
+ const skip=document.getElementById('introSkip');
+ if(!intro||!skip)return;
+ let closed=false;
+ function closeIntro(){if(closed)return;closed=true;intro.classList.add('intro-hide');document.body.classList.remove('intro-lock');setTimeout(()=>intro.remove(),900);}
+ document.body.classList.add('intro-lock');
+ skip.addEventListener('click',closeIntro);
+ window.addEventListener('keydown',e=>{if(e.key==='Escape'&&!closed)closeIntro();});
+ window.setTimeout(closeIntro,14500);
+})();
+</script>
+
+
+<header class="topbar">
+  <div class="brand"><span class="pin emoji3d">📍</span><span>Erciş Rehberi</span><small>Erciş’te aradığın her şey<br>bir tık uzağında!</small></div>
+  <div style="display:flex;align-items:center;gap:18px"><nav class="topnav"><a href="#top">⌂ &nbsp;Ana Sayfa</a><a href="#categories">▦ &nbsp;Kategoriler</a><a href="#businesses"><span class="emoji3d">📍</span> &nbsp;İşletmeler</a><a href="#search">⌕ &nbsp;Ara</a></nav><button class="theme-toggle" id="themeToggle" type="button" aria-label="Görünümü değiştir">☾ Tema</button></div>
+</header>
+<header class="hero" id="top">
+  <div class="hero-content">
+    <h1>Erciş’teki İşletmeleri Keşfet</h1>
+    <p>Restoran, kafe, mağaza, eczane ve daha fazlası... Erciş’te aradığın yeri bul, haritada aç ve kolayca ulaş.</p>
+    <div class="hero-links"><a href="#categories">🧭 Kategorileri keşfet</a><a href="#businesses">🏪 Tüm işletmeler</a><button type="button" onclick="showFavoritesOnly()">♥ Favorilerim</button></div>
+    <div class="search-wrap"><input id="search" class="search" type="search" placeholder="İşletme, kategori veya isim ara..."><button class="search-btn" onclick="document.getElementById('grid').scrollIntoView({behavior:'smooth'})">Ara</button></div>
+  </div>
+</header>
+
+<main class="panel">
+  <section class="weather-card" aria-label="Erciş hava durumu" id="weather">
+    <div class="weather-main">
+      <div class="weather-label">🌤️ ERÇİŞ • GÜNCEL HAVA DURUMU</div>
+      <div class="weather-current"><span class="weather-icon" id="weatherIcon">🌤️</span><div><div class="weather-temp" id="weatherTemp">--°</div><div class="weather-desc" id="weatherDesc">Hava durumu yükleniyor…</div></div></div>
+      <div class="weather-stats"><span>🌡️ Hissedilen <b id="weatherFeels">--°</b></span><span>💧 Nem <b id="weatherHumidity">--%</b></span><span>💨 Rüzgâr <b id="weatherWind">-- km/sa</b></span></div>
+    </div>
+    <div class="weather-side"><div class="forecast-title">ÖNÜMÜZDEKİ GÜNLER</div><div class="forecast" id="forecast"><div class="forecast-day">Yükleniyor…</div></div><div class="weather-updated" id="weatherUpdated">Hava durumu verisi internet bağlantısıyla güncellenir.</div></div>
+  </section>
+  <section class="quick-stats" aria-label="Rehber özeti">
+    <div class="stat-tile"><span class="stat-icon">🏪</span><div><strong id="totalStat">212+</strong><small>Rehberdeki işletmeler</small></div></div>
+    <div class="stat-tile"><span class="stat-icon">🔎</span><div><strong>Kolay arama</strong><small>İsim ve kategoriye göre keşfet</small></div></div>
+    <div class="stat-tile"><span class="stat-icon">📍</span><div><strong>Erciş, Van</strong><small>Yerel işletmeler tek yerde</small></div></div>
+  </section>
+  <div class="section-heading" id="businesses"><div><h2>İşletmeleri keşfet</h2><p>Aradığın yeri bul, puanları incele ve kolayca ulaş.</p></div></div>
+  <section class="local-highlights" aria-label="Erciş rehberi hızlı keşif">
+    <div class="highlight-head"><div><span class="mini-eyebrow">ERCİŞ’İ KEŞFET</span><h2>Bugün nereye gidelim?</h2><p>İhtiyacına göre kategori seç veya rehberdeki işletmeleri ara.</p></div><a href="#businesses">Tümünü gör →</a></div>
+    <div class="highlight-grid">
+      <button class="highlight-card" type="button" onclick="selectCategory('Yemek')"><span class="big-emoji">🍜</span><b>Yemek & Lokanta</b><small>Lezzet duraklarını bul</small></button>
+      <button class="highlight-card" type="button" onclick="selectCategory('Kafe')"><span class="big-emoji">☕</span><b>Kafeler</b><small>Kahve molanı planla</small></button>
+      <button class="highlight-card" type="button" onclick="selectCategory('Eczane')"><span class="big-emoji">💊</span><b>Eczaneler</b><small>Yakındaki seçenekleri ara</small></button>
+      <button class="highlight-card" type="button" onclick="selectCategory('Oto')"><span class="big-emoji">🚗</span><b>Oto hizmetleri</b><small>Aracın için işletmeler</small></button>
+    </div>
+  </section>
+
+  <section class="life-hub" id="yerel-yasam" aria-label="Erciş yerel yaşam özellikleri">
+    <div class="life-hub-head">
+      <div><span class="life-tag">YENİ • ERCİŞ YEREL YAŞAM MERKEZİ</span><h2>Erciş'te hayatı kolaylaştır ✨</h2><p>Usta bul, fırsat ve ilanları takip et, etkinlikleri keşfet. Araçlar bu tek dosyalık sürümde cihazında çalışır; ilan ve menü önerileri onay gelmeden yayımlanmaz.</p></div>
+    </div>
+    <div class="life-grid">
+      <button class="life-tile" type="button" data-life="usta"><span class="life-icon">🧰</span><b>Usta Bul</b><small>Tamir, bakım ve yerel hizmetleri ara</small></button>
+      <button class="life-tile" type="button" data-life="offers"><span class="life-icon">🏷️</span><b>Erciş Fırsatları</b><small>Yerel indirim ve kampanya notları</small></button>
+      <button class="life-tile" type="button" data-life="events"><span class="life-icon">📅</span><b>Etkinlik Takvimi</b><small>Etkinlik ekle, tarihleri gör</small></button>
+      <button class="life-tile" type="button" data-life="listings"><span class="life-icon">🛍️</span><b>Yerel İlanlar</b><small>Alışveriş ve ilan taslağı oluştur</small></button>
+      <button class="life-tile" type="button" data-life="notices"><span class="life-icon">📣</span><b>Erciş Duyuruları</b><small>Topluluk duyurularını düzenle</small></button>
+      <button class="life-tile" type="button" data-life="nearby"><span class="life-icon">📍</span><b>Yakınımda Bul</b><small>Haritada yakın yerleri keşfet</small></button>
+      <button class="life-tile" type="button" data-life="popular"><span class="life-icon">🔥</span><b>İlgi Görenler</b><small>Bu cihazda en çok açılan işletmeler</small></button>
+      <button class="life-tile" type="button" data-life="manage"><span class="life-icon">🏪</span><b>İşletmemi Yönet</b><small>İşletme güncelleme talebi hazırla</small></button>
+      <button class="life-tile" type="button" data-life="jobs"><span class="life-icon">💼</span><b>İş İlanları</b><small>İş ara veya ilan öner</small></button>
+      <button class="life-tile" type="button" data-life="lost"><span class="life-icon">🔎</span><b>Kayıp ve Bulundu</b><small>Kayıp eşya duyurusu gönder</small></button>
+      <button class="life-tile" type="button" data-life="menus"><span class="life-icon">🍽️</span><b>Dijital Menü ve Fiyatlar</b><small>Menü veya fiyat öner</small></button>
+      <button class="life-tile" type="button" data-life="prices"><span class="life-icon">💸</span><b>Fiyat Karşılaştırma</b><small>Ürün fiyatlarını incele</small></button>
+      <button class="life-tile" type="button" data-life="transport"><span class="life-icon">🚌</span><b>Erciş Ulaşım</b><small>Güzergâh ve ulaşım bağlantıları</small></button>
+      <button class="life-tile" type="button" data-life="ask"><span class="life-icon">🙋</span><b>Erciş'e Sor</b><small>Soru veya yerel öneri gönder</small></button>
+      <button class="life-tile" type="button" data-life="discover"><span class="life-icon">🏞️</span><b>Erciş'i Keşfet</b><small>Yerel keşif ve harita</small></button>
+      <button class="life-tile" type="button" data-life="favorites"><span class="life-icon">❤️</span><b>Favorilerim</b><small>Kaydettiğin işletmeleri bul</small></button>
+      <button class="life-tile" type="button" data-life="pending"><span class="life-icon">🛡️</span><b>Gönderi Durumu</b><small>Onay bekleyen gönderilerini gör</small></button>
+    </div>
+    <div class="life-workspace" id="lifeWorkspace" aria-live="polite">
+      <h3>Nasıl yardımcı olalım?</h3><p>Yukarıdaki özelliklerden birini seç. Oluşturduğun ilan, etkinlik ve fırsat taslakları bu cihazın tarayıcısında saklanır; siteye veya diğer ziyaretçilere otomatik yayımlanmaz.</p>
+    </div>
+  </section>
+
+  <nav class="categories" id="categories">
+    <button class="active" data-cat="Tümü">Tümü</button>
+    <button data-cat="Yemek"><span class="emoji3d">🍽️</span> Yemek</button>
+    <button data-cat="Kırtasiye"><span class="emoji3d">📚</span> Kırtasiye</button>
+    <button data-cat="Spor"><span class="emoji3d">⚽</span> Spor</button>
+    <button data-cat="Kurs"><span class="emoji3d">🎓</span> Kurs</button>
+    <button data-cat="Kafe"><span class="emoji3d">☕</span> Kafe</button>
+    <button data-cat="Berber"><span class="emoji3d">✂️</span> Berber</button>
+    <button data-cat="Eczane"><span class="emoji3d">💊</span> Eczane</button>
+    <button data-cat="Market"><span class="emoji3d">🛒</span> Market</button>
+    <button data-cat="Otel"><span class="emoji3d">🏨</span> Otel</button>
+    <button data-cat="Telefon"><span class="emoji3d">📱</span> Telefon</button>
+    <button data-cat="Oto"><span class="emoji3d">🚗</span> Oto</button>
+    <button data-cat="Diğer"><span class="emoji3d">🧰</span> Diğer</button>
+  </nav>
+
+  <div class="tools-row"><div class="tools-left"><select class="tool-select" id="sortSelect" aria-label="Sıralama"><option value="default">Varsayılan sıralama</option><option value="name">İsme göre A–Z</option><option value="rating">Puana göre yüksekten düşüğe</option></select><button class="tool-button" id="favoritesToggle" type="button">♡ Favorilerim</button></div><span class="result-label" id="count"></span></div>
+  <div class="advanced-filters" aria-label="Gelişmiş filtreler">
+    <label>📂 Kategori <select id="filterCategory" class="tool-select"><option value="Tümü">Tüm kategoriler</option></select></label>
+    <label>⭐ En az puan <select id="minRating" class="tool-select"><option value="0">Tüm puanlar</option><option value="3">3+ puan</option><option value="4">4+ puan</option><option value="4.5">4,5+ puan</option></select></label>
+    <label class="check-filter"><input type="checkbox" id="withPhone"> Telefonu olanlar</label>
+    <label class="check-filter"><input type="checkbox" id="withAddress"> Adresi olanlar</label>
+    <button class="tool-button" id="clearFilters" type="button">Filtreleri temizle</button>
+  </div>
+  <section class="grid" id="grid"></section>
+  <div style="display:flex;justify-content:center;margin-top:28px"><button class="tool-button" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Başa dön</button></div>
+</main>
+
+<div class="modal-backdrop" id="reportModal" hidden role="dialog" aria-modal="true" aria-labelledby="reportTitle">
+  <div class="report-modal"><button class="modal-close" id="closeReport" type="button" aria-label="Kapat">×</button><span class="mini-eyebrow">TOPLULUK KATKISI</span><h2 id="reportTitle">İşletme bilgisini bildir</h2><p id="reportBusinessName" class="report-business-name"></p>
+    <form id="reportForm"><label>Hangi bilgi yanlış veya eksik?<select id="reportType" required><option value="">Bir konu seç</option><option>Telefon numarası</option><option>Adres / harita konumu</option><option>İşletme kapandı veya taşındı</option><option>İşletme adı / kategori</option><option>Fotoğraf</option><option>Diğer</option></select></label><label>Açıklama<textarea id="reportDetails" rows="3" placeholder="Doğru bilgiyi veya düzeltme önerini yaz…" required></textarea></label><label>İsteğe bağlı iletişim bilgisi<input id="reportContact" type="text" placeholder="E-posta veya telefon (isteğe bağlı)"></label><button class="search-btn" type="submit">Bildirim metnini hazırla</button></form>
+    <div id="reportResult" hidden><p>Bildirim metnin hazır. Kopyalayıp rehber yöneticisine iletebilirsin.</p><textarea id="reportOutput" rows="6" readonly></textarea><button class="search-btn" id="copyReport" type="button">Metni kopyala</button><span id="copyStatus" aria-live="polite"></span></div>
+    <p class="report-note">Bu statik site bildirimi otomatik olarak sunucuya göndermez; metni senin iletmen gerekir.</p>
+  </div>
+</div>
+<footer><span class="emoji3d">📍</span> Tüm işletmeler Erciş, Van bölgesindedir. Telefon ve adres bilgilerini ziyaret etmeden önce işletmeyle teyit edin.<br><br>Erciş’i birlikte keşfedelim ♥</footer>
+
+<script>
+function placeholder(cat){
+  // Gerçekçi, kategoriyle ilgili fotoğraflar. Bunlar stok fotoğraflardır; belirli Erciş işletmelerinin fotoğrafı oldukları iddia edilmez.
+  const photos={
+    Yemek:'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=85',
+    Kırtasiye:'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85',
+    Spor:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85',
+    Kurs:'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85',
+    Kafe:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85',
+    Berber:'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=85',
+    Eczane:'https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=1000&q=85',
+    Market:'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=85',
+    Otel:'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85',
+    Telefon:'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1000&q=85',
+    Oto:'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=85',
+    Diğer:'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85'
+  };
+  return photos[cat] || photos.Diğer;
+}
+
+const data=[
+  ["Yemek","Bizim Döner","Döner ve hızlı yemek","05385699526",null,null,"Yukarı TOKİ, TOKİ Bizim Döner, 65400 Erciş/Van"],
+  ["Yemek","Dönerci Doğan Ustanın Yeri","Döner ve sıcak yemek","05330488313",null,null,"Kışla Mah., Emrah Cad. K3, 65400 Erciş/Van"],
+  ["Yemek","ÖZBAY ET LOKANTASI","Et yemekleri ve lokanta","05331621247",null,null,"Kışla Mah., 408. Sokak, 65400 Erciş/Van"],
+  ["Yemek","Pizza Pizza Van - Erciş","Pizza ve hızlı yemek","04323515050",null,null,"Salihiye Mah., Van Yolu Blv. No:8, 65400 Erciş/Van"],
+  ["Yemek","Komagene","Çiğ köfte","05445286665",null,null,"Kışla Mah., İnönü Cd. No:7, 65400 Erciş/Van"],
+  ["Yemek","Nasibim Et Balık Lokantası","Et ve balık yemekleri","",null,null,"Tekevler Mah., 1235. Sokak No:6, 65400 Erciş/Van"],
+  ["Yemek","Sahilkent Dönercisi","Döner","05447382216"],
+
+  ["Kırtasiye","Akademi Sahaf&Kırtasiye","Kitap ve kırtasiye","05362072665",null,null,"Camikebir Mah., Emrah Sok. No:34, 65400 Erciş/Van"],
+  ["Kırtasiye","SAHRA KIRTASİYE","Kırtasiye","05076423082",null,null,"Sahilkent Mah., Etap İş Merkezi, Küme Evler Sok. No:3, 65400 Erciş/Van"],
+  ["Kırtasiye","Birikim Kırtasiye","Kırtasiye","",null,null,"Camikebir Mah., Harpin Yolu No:5, 65400 Erciş/Van"],
+  ["Kırtasiye","İkizler Kitap Kırtasiye","Kitap ve kırtasiye","",null,null,"Vanyolu Mah., 206. Sokak No:2, 65400 Erciş/Van"],
+  ["Kırtasiye","Onur Kitap Kırtasiye","Kitap ve kırtasiye","",null,null,"Camikebir Mah., Harpin Yolu No:6, 65400 Erciş/Van"],
+  ["Kırtasiye","ÇELEBİ KİTAP KIRTASİYE","Kitap ve kırtasiye","05369332662",null,null,"Latifiye Mah., Zeylan Cd., Beko Bayii çaprazı, 65400 Erciş/Van"],
+  ["Kırtasiye","Kampüs Sahaf Kitap Kırtasiye","Kitap ve kırtasiye","05362072665"],
+  ["Kırtasiye","Çilek Sahaf & Fotokopi Çekim Merkezi","Sahaf ve fotokopi","05364584696",null,null,"Kışla Mah., Kentsel Dönüşüm Dükkanları (803. Sokak civarı), 65400 Erciş/Van"],
+  ["Kırtasiye","Türkmenoğlu Bilişim.Kırt.Ltd.Şti.","Bilişim ve kırtasiye","05459438605",null,null,"Camikebir Mah., 804. Meydan Sok. No:4A, Pala Apart altı, 65400 Erciş/Van"],
+  ["Kırtasiye","Erciş Sahaf Kırtasiye","Sahaf ve kırtasiye","05427745882"],
+  ["Kırtasiye","Erciş Fotokopi Dünyası","Fotokopi ve kırtasiye","05421739665",null,null,"Kışla Mah., Turgut Özal Cd., Askerlik Şubesi karşısı, 65400 Erciş/Van"],
+
+  ["Spor","Sporium Fitness Center","Fitness","05416389194","",null,"Vanyolu Mah., Van Yolu Blv. No:59, 65400 Erciş/Van"],
+  ["Spor","Şampiyon Halı Saha","Halı saha","05075154051",null,null,"Vanyolu Mah., Van Yolu Blv. No:186, 65400 Erciş/Van"],
+  ["Spor","Şampiyon Spor Salonu","Spor salonu","05075154051"],
+  ["Spor","Erciş Flex Reformer Pilates","Reformer Pilates","05421940565"],
+  ["Spor","Erciş Arena Halı Saha","Halı saha","05324746960",null,null,"Beyazıt Mah., 364. Sokak, 65400 Erciş/Van"],
+  ["Spor","X Power Center","Fitness","05308870065"],
+  ["Spor","Şampiyon Bilardo Cafe","Bilardo","05425507720"],
+  ["Spor","ATAVAN Spor Tesisleri","Spor tesisi","05325871717"],
+
+  ["Kurs","ERCİŞ ÇÖZÜM KURS MERKEZİ","Özel öğretim kursu","05433233450"],
+  ["Kurs","Erciş Hacettepe Özel Öğretim Kursu","Özel öğretim kursu","05369986527",null,null,"Vanyolu Mah., Tekevler Cad. No:26, Erciş/Van"],
+  ["Kurs","Erciş Limit Özel Öğretim Kursu","Özel öğretim kursu","",3.0,null,"Vanyolu Mah., Van Yolu Blv., Atakan Çelik İş Merkezi, D:2, 65400 Erciş/Van"],
+  ["Kurs","Marmara Vip Akademi Etüt Merkezi","Etüt merkezi","05537766085",null,null,"Vanyolu Mah., Tekevler Cd., Van minibüs durağı civarı, 65400 Erciş/Van"],
+  ["Kurs","Erciş Doğru Cevap (Hedef) Özel Öğretim Kursu","Özel öğretim kursu","04323510077"],
+  ["Kurs","Özel Erciş Uğur Özel Öğretim Kursu","Özel öğretim kursu","04323510077"],
+  ["Kurs","6-H Özel Güvenlik Kursu","Özel güvenlik kursu","05427323965"],
+  ["Kurs","Özel Erciş Final Özel Öğretim Kursu","Özel öğretim kursu","04323516161",null,null,"Kışla Mah., Çınarlı Cd. No:55, 65400 Erciş/Van"],
+
+  ["Kafe","THE CAFE (ERCİŞ)","Kafe","",5.0],
+  ["Kafe","Blec Coffee | Van Erciş Şubesi","Kahve ve kafe","05412591063",null,null,"Vanyolu Mah., Kara Yusuf Bey Blv. No:10B, 65400 Erciş/Van"],
+  ["Kafe","Alamut Cafe","Kafe","05462730271",null,null,"Camikebir Mah., Kara Yusuf Bey Blv. No:153B, Garanti Bankası üstü, 65400 Erciş/Van"],
+  ["Kafe","Kahve Diyarı – Sahilkent","Kafe","4442345",3.6],
+  ["Kafe","Cafe Bahane","Kafe","05525426252"],
+  ["Kafe","Babil Cafe","Kafe","05359124776"],
+  ["Kafe","İstanbul Cafe Erciş","Kafe","05330787395"],
+  ["Kafe","Allegro Coffee Lab","Kahve ve kafe","05379832487",4.6],
+  ["Kafe","Tesadüf Cafe","Kafe","05424985688",3.7,null,"Vanyolu Mah., Van Yolu Blv. No:59, 65400 Erciş/Van"],
+  ["Kafe","Mualla Tatlı Krallığı","Tatlı ve kafe","05331286444",4.3],
+  ["Kafe","Semiramis Tekne Caffe","Kafe","05458424497"],
+
+  ["Berber","Ckn Saç Tasarım","Erkek kuaförü","05392100973",5.0],
+  ["Berber","Istanbul Berberi","Erkek kuaförü","",5.0],
+  ["Berber","Erciş Erkek Kuaförü","Erkek kuaförü","05314042903"],
+  ["Berber","Mert Erkek Kuaförü","Erkek kuaförü","05063033551"],
+  ["Berber","RK Hair Studio","Kuaför","05350583203"],
+
+  ["Eczane","ÇAKIR ECZANESİ","Eczane","05419226582",5.0,null,"Adnan Menderes Mah., Erhan Çavuşoğlu-1 Sokak No:16, 65400 Erciş/Van"],
+  ["Eczane","YALÇINKAYA ECZANESİ","Eczane","04323882323",null,null,"Sahilkent Mah., TOKİ Cd. No:12/M, Aşağı TOKİ İş Merkezi/Migros yanı, 65400 Erciş/Van"],
+  ["Eczane","AKILLI ECZANE","Eczane","05466223362",null,null,"Kışla Mahallesi, İnönü Caddesi, B 2 Blok No:8, 65400 Erciş/Van"],
+  ["Eczane","BİRLİK ECZANESİ","Eczane","04323514242"],
+  ["Eczane","Öz Yaşam Eczanesi","Eczane","04323519092"],
+
+  ["Market","BİZİM MARKET","Market",""],
+  ["Market","Yuvam Market","Market",""],
+  ["Market","A101 (Vanyolu)","Market","08508082101"],
+  ["Market","ŞOK (Vanyolu)","Market","08508080000"],
+
+  ["Otel","Maciter Hotel","Otel","04323513905",4.0,null,"Vanyolu Mah., Van Yolu Blv. No:45, 65400 Erciş/Van"],
+  ["Otel","DİLMAN GOLD OTEL ERCİŞ","Otel","04323515263"],
+  ["Otel","Dilman Apart Otel","Apart otel","04323515251"],
+  ["Otel","Erciş Elit Otel","Otel","04323512646"],
+
+  ["Telefon","TEKNOMAX","Telefon ve teknoloji","05323268622"],
+  ["Telefon","Tekin İletişim","Telefon ve iletişim","",null,null,"Latifiye Mah., İnönü Cd., 65400 Erciş/Van"],
+  ["Telefon","ES GSM","GSM ve telefon","05437292973"],
+  ["Telefon","Turkcell İletişim Merkezi (Vanyolu)","GSM","05326323535"],
+  ["Telefon","Vodafone Cep Merkezi (Kışla)","GSM","04323542088"],
+
+  ["Oto","Erciş Poyraz Otomotiv","Otomotiv",""],
+  ["Oto","Oto Abbas Tamir ve Bakım Servisi","Oto servis",""],
+  ["Oto","Otokarne Oto Ekspertiz Erciş","Oto ekspertiz","05324789935",5.0],
+  ["Oto","Kırar-Otomotiv","Otomotiv","05435650221"],
+  ["Oto","Dünya Otomotiv","Otomotiv","05438607110",null,null,"Özdemirhanoğlu Cad., Kaymakamlık yanı No:2, 65400 Erciş/Van"],
+  ["Yemek","Zirve Tavuk Döner Salonu","Tavuk döner","05372851019"],
+  ["Yemek","Zezu Kahvaltı & Cafe","Kahvaltı ve kafe","05011369202"],
+  ["Yemek","Tantunix Erciş","Tantuni","05330557065"],
+  ["Yemek","Seydaoğlu Lokanta","Lokanta","05374332431"],
+  ["Yemek","Nesh Waffle Cafe & Bistro","Waffle ve kafe","05445897056"],
+  ["Yemek","KURD GASTRONOMIA RESTAURANT","Restoran","05350374045"],
+  ["Yemek","Mahar-et Izgara Restaurant","Izgara ve restoran","05012350065"],
+  ["Yemek","Furkan Künefe Erciş","Künefe ve tatlı","05415844174"],
+  ["Yemek","Gözde Balık Ekmek","Balık ekmek","05336176165"],
+  ["Yemek","Doy Doy Lokanta","Lokanta","05435771927"],
+  ["Yemek","Diyarbakır Ciğer Showroom","Ciğer ve restoran","05384870393"],
+  ["Yemek","Destan Döner Erciş","Döner","05441623265"],
+  ["Yemek","Demlik Kahvaltı Katmer Künefe","Kahvaltı ve tatlı","05418659465"],
+  ["Yemek","Kanarya Kebap Salonu","Kebap salonu",""],
+  ["Kafe","Tömbeki Kafe","Kafe","05073332197"],
+  ["Kafe","The Moon Cafe","Kafe","05386640440"],
+  ["Kafe","Santra Playstation Cafe","Oyun kafe","05416787500"],
+  ["Kafe","Last Summer Kahvaltı Salonu","Kahvaltı salonu","05303304636"],
+  ["Kafe","Değirmen Cafe","Kafe","05428297802"],
+  ["Kafe","Cafe Tost","Kafe ve tost","05308414965"],
+  ["Kafe","Cafe Paula","Kafe","05348708569"],
+  ["Kafe","Cafe Deniz Et Ve Balık","Kafe ve balık","05382827865"],
+  ["Kafe","Almina Caffe Okey Salonu","Kafe","05364575001"],
+  ["Kafe","Aşina Kahvaltı Salonu","Kahvaltı salonu","05324789861"],
+  ["Berber","MST Erkek Kuaför","Erkek kuaförü","05314042903"],
+  ["Berber","Mercan Erkek Kuaförü","Erkek kuaförü","05442476522"],
+  ["Berber","Melissa Bayan Kuaförü","Kadın kuaförü","05369886103"],
+  ["Berber","Kuaför RÉZAN","Kuaför","05419629431"],
+  ["Berber","Kuaför Halime & Elif","Kuaför","05416613694"],
+  ["Berber","Favori Erkek Kuaförü","Erkek kuaförü","05368507065"],
+  ["Berber","Fiyaka Kuaför Salonu","Kuaför","05444907706"],
+  ["Berber","Star Kuaför","Kuaför","05378509422"],
+  ["Kırtasiye","Birikim 2 Kırtasiye","Kırtasiye","05354256413"],
+  ["Market","Toz Market","Market","05462730396"],
+  ["Market","Aktekinler Market","Market","05453586872"],
+  ["Market","Bizim Market","Market",""],
+  ["Telefon","TEKNO VAN","Telefon ve teknoloji","05423352471"],
+  ["Telefon","Teknikelektronik","Elektronik","05339451245"],
+  ["Telefon","Mebax Toptan GSM Aksesuar","GSM aksesuarı","05350565565"],
+  ["Telefon","Dünya İletişim","Telefon ve iletişim","05389777474"],
+  ["Telefon","Mutlunet Ödeme Noktası Yasir İletişim","İletişim ve ödeme noktası","05372886157"],
+  ["Oto","İslam Otomotiv","Otomotiv","05536496295"],
+  ["Oto","Sevinçoğlu Otomotiv","Otomotiv","05457786393"],
+  ["Oto","Metin Oto Elektrik","Oto elektrik","05435280450"],
+  ["Oto","Merkez Oto Lastik Erciş","Lastik servisi","05417632760"],
+  ["Oto","Kral Oto Lastik Erciş Yol Yardım","Lastik ve yol yardım","05368730525"],
+  ["Oto","Kral Oto Elektronik Erciş","Oto elektronik","05325572151"],
+  ["Oto","LastikPark - Doğanlar Group","Lastik servisi","05427965898"],
+  ["Oto","Lastik Pazarı","Lastik servisi","05334574666"],
+  ["Oto","Garaj 35 Garage Tuning","Oto kaporta ve tuning","05529204665"],
+  ["Oto","Aram Oto Kaporta Boya","Kaporta ve boya","05414130962"],
+  ["Oto","Fatih Oto Boyasız Göçük Düzeltme","Oto kaporta","05424644951"],
+  ["Oto","Eyüp Oto","Oto servis","05359609935"],
+  ["Oto","ET-SA Nizam Usta Erciş","Oto servis","05337638855"],
+  ["Oto","Ecir Oto Galeri","Oto galeri","05306874589"],
+  ["Oto","Can Oto Galeri","Oto galeri","05325662120"],
+  ["Oto","Doğan Oto Kuaför ve Oto Aksesuar","Oto yıkama ve aksesuar","05462510265"],
+  ["Otel","Naim Turizm Van Erciş Arası Havalimanı Servisi","Ulaşım ve transfer","05336786886"],
+  ["Eczane","Tekbir Eczanesi","Eczane","05055928865","","","Vanyolu Mah., Karayusuf Bey Blv. No:105/A, Diş Hastanesi karşısı, 65400 Erciş/Van",""],
+  ["Eczane","Lavanta Eczanesi","Eczane","05393473434"],
+  ["Kurs","Erciş SRC Kurs","SRC ve sürücü eğitimi","05065641918"],
+  ["Spor","Şampiyon Halisaha","Halı saha","05075154051",null,null,"Vanyolu Mah., Van Yolu Blv. No:186, 65400 Erciş/Van"],
+  ["Diğer","Er-Tem Halı Yıkama Merkezi","Halı ve koltuk yıkama","05379550794"],
+  ["Diğer","Erciş Yumoş Halı & Koltuk Yıkama Merkezi","Halı ve koltuk yıkama",""],
+  ["Diğer","Saremsi Güzellik ve Bakım Salonu","Güzellik salonu","05052395198"],
+  ["Diğer","Lilium Güzellik Salonu","Güzellik salonu","05525054600"],
+  ["Diğer","Zengin Veteriner Kliniği","Veteriner","05069821966"],
+  ["Diğer","Ceylan Veteriner Kliniği","Veteriner","05387825310"],
+  ["Diğer","Erciş Sağlık Kabini","Sağlık kabini","05427362577"],
+  ["Diğer","Gözde Optik","Optik","05439319609"],
+  ["Diğer","Sürat Kargo Erciş","Kargo","04323517732"],
+  ["Diğer","Yurtiçi Kargo Erciş","Kargo","04323519453"],
+  ["Diğer","Özel Erciş Med Hastanesi","Hastane","04323510000"],
+  ["Diğer","Aslan Dental Medikal","Medikal","05434933602"],
+  ["Diğer","Sancak Cam","Cam ve doğrama","05327326516"],
+  ["Diğer","FOTO ULAŞ","Fotoğrafçı","05337312724"],
+  ["Diğer","Foto Sevinç","Fotoğrafçı","05418624562"],
+  ["Diğer","Foto Roza","Fotoğrafçı","05427362625"],
+  ["Diğer","Foto Nuri","Fotoğrafçı","05385955014"],
+  ["Diğer","Foto Kenan","Fotoğrafçı","05326573501"],
+  ["Diğer","Foto Erciş","Fotoğrafçı","05395496509"],
+  ["Diğer","Foto Cafer","Fotoğrafçı","05452711885"],
+  ["Diğer","Manolya Pastanesi","Pastane","05413958283"],
+  ["Diğer","Pasta Love Erciş","Pastane","05413064439",null,null,"Vanyolu Mah., Van Yolu Blv., 65400 Erciş/Van"],
+  ["Diğer","Öz Ekmek Fabrikası ve Taş Fırın Ekmeği","Fırın","04323515871"],
+  ["Diğer","Çıtır Simit","Fırın ve simit","05369402035",null,null,"Camikebir Mah., Vanyolu Cd., eski PTT karşısı, 65400 Erciş/Van"],
+  ["Diğer","Ada Ocakbaşı","Ocakbaşı","05372387271"],
+  ["Yemek","Sütçüzade Erciş","Kahvaltı ve yöresel lezzetler","05336533180",4.6,"https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SXTs5X4n1Kb5bZWJdZ4wCMV5jT9IdHi_6gE2nGV6uZMYzaH5aUlzZMHLoxVRR56m5xvNKfcDPRElbADC47t7JVyYW2THOS61Kj_R8slXHq4XF7tODqijcWKjZhYZD3c7XiZb9kEOduLIja%3Dw408-h725-k-no","Karayusufbey Bulvarı, DSİ karşısı, Aura Hamam yanı","Google Maps işletme fotoğrafı"],
+  ["Diğer","Terra Pizza - Van Erciş","Pizza","05334500108",null,null,"Vanyolu Mah., Tekevler Cd. No:110, 65400 Erciş/Van"],
+  ["Diğer","Hey Döner Van - Erciş","Döner","04323300411",null,null,"Vanyolu Mah., Kara Yusuf Bey Blv. No:83/D, 65400 Erciş/Van"],
+  ["Diğer","Recep Ustanın Yeri","Restoran","05333034009"],
+  ["Diğer","Soğuk Duş Self Servis Oto Yıkama","Oto yıkama","05456005076",5.0,"https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmoijNOOLGSPgl1w4sm0mLE8Fgll9NJiznR9PDO7gURnPeHNCTgOX7a9w7XQe_3ihrnVQaG_x9A-_Gzp18AkFeRekRHq4WBX8ChAelUCuJuoYQZYC6ldHwr2gQauAMW7uYPm1vOXpLd048%3Dw426-h240-k-no","Alkanat, Tekevler Cd. 48/1, Erciş","Google Maps işletme fotoğrafı"],
+  ["Berber","Ceren Kuaför","Kuaför ve saç tasarımı","05427939429",3.3,"https://lh3.googleusercontent.com/grass-cs/ACvplmMNWSJFTxXJGRAp8JDY7XRZwmqlTOge3a7HTDwTqPmkCrm1Gw1FuIWkxO0axkgPF_VsbB09cpNOje_-CnA6eWEfOo5y5iygPO_ubCBUtNJO-8pjBSPLyWaCCA28Xd9fT5mO_yiMmA%3Dw408-h544-k-no","Vanyolu Cad., Zincir Giyim yanı, Erciş","Google Maps işletme fotoğrafı"],
+  ["Eczane","ALAY ECZANESİ","Eczane","04325022949","","","Latifiye Mah. 458. Uzun Sk. No:4","Public directory / map listing"],
+  ["Eczane","ARJİN ECZANESİ","Eczane","05350148570","","","Beyazıt Mah. Zeylan Cad. Okyanus Giyim yanı No:1","Public directory / map listing"],
+  ["Eczane","ARSLAN ECZANESİ","Eczane","04323519491","","","Kışla Mah. İnönü Cad. Kentsel Dönüşüm Dükkanları B2 Blok No:5","Public directory / map listing"],
+  ["Eczane","BİLİCİ ECZANESİ","Eczane","04323543200","","","Şehitler Cad. Kışla Mah. Çınar Cad. 55. Sk. 9/1, yeni hastane karşısı","Public directory / map listing"],
+  ["Eczane","BÜYÜK ECZANESİ","Eczane","04325039865","","","Kentsel Dönüşüm köşesi, Kaymakamlık çaprazı No:19","Public directory / map listing"],
+  ["Eczane","ÇAĞLAR ECZANESİ","Eczane","05449385259","","","Vanyolu Mah. Karayusuf Bey Bulvarı, Diş Hastanesi karşısı No:99/E","Public directory / map listing"],
+  ["Eczane","ÇELEBİ ECZANESİ","Eczane","04323517272","","","Kışla Mah. Kürüm Meydanı No:19","Public directory / map listing"],
+  ["Eczane","ÇİÇEK ECZANESİ","Eczane","04323511500","","","Vanyolu Cad. Diş Hastanesi önü, Nizam Usta Lokantası yanı","Public directory / map listing"],
+  ["Eczane","ÇINARLI ECZANESİ","Eczane","04323544834","","","Yeni Devlet Hastanesi acil servis karşısı No:93/D","Public directory / map listing"],
+  ["Eczane","DEFNE ECZANESİ","Eczane","05417928497","","","Vanyolu Cad. Karayusufbey Bulvarı 140/B","Public directory / map listing"],
+  ["Eczane","DERMAN ECZANESİ","Eczane","04323542817","","","Vanyolu Cad. hastane karşısı No:2","Public directory / map listing"],
+  ["Eczane","DEVA ECZANESİ","Eczane","04323513233","","","Beyazıt Mah. Zeydan Cad. No:24","Public directory / map listing"],
+  ["Eczane","DOĞU ECZANESİ","Eczane","04323517330","","","Vanyolu Mah. Diş Hastanesi karşısı, Özel Med Tıp yanı No:11A","Public directory / map listing"],
+  ["Eczane","EMEK ECZANESİ","Eczane","04323518521","","","Şehitler Cad. yeni hastane karşısı No:91/D","Public directory / map listing"],
+  ["Eczane","ENGİN ECZANESİ","Eczane","04323515550","","","Beyazıt Mah. Zeylan Cad. No:46/A","Public directory / map listing"],
+  ["Eczane","ERCİŞ ECZANESİ","Eczane","04323512930","","","Şehitler Cad. Çınarlı Mah. No:93/1, yeni devlet hastanesi karşısı","Public directory / map listing"],
+  ["Eczane","ERKAN ECZANESİ","Eczane","05466460099","","","Çelebibağı Mah. Adilcevaz Yolu Bulvarı No:14","Public directory / map listing"],
+  ["Eczane","ERVAN ECZANESİ","Eczane","04325027258","","","Çınarlı Mah. Şehitler Cad. yeni hastane yolu üzeri, VEDAŞ karşısı No:73/B","Public directory / map listing"],
+  ["Eczane","EVİN ECZANESİ","Eczane","05374757119","","","Kışla Mah. Turgut Özal Bulvarı No:5/A","Public directory / map listing"],
+  ["Eczane","GÜNEŞ ECZANESİ","Eczane","05010277665","","","Kışla Mah. Şehitler Cad. No:77, Şehit Rıdvan Çevik Devlet Hastanesi karşısı","Public directory / map listing"],
+  ["Eczane","GÜRBÜZ ECZANESİ","Eczane","04323510352","","","Erciş Devlet Hastanesi karşısı","Public directory / map listing"],
+  ["Eczane","HANÇER ECZANESİ","Eczane","05432043932","","","Kışla Mah. Şehitler Cad. No:77, hastane karşısı","Public directory / map listing"],
+  ["Oto","Güven Oto Gaz","Oto gaz servisi","04323882400","","","1237. Sokak 54, Erciş","Public directory / map listing"],
+  ["Oto","Nadiroğlu OTOPRATİK","Oto servis","05335018965","","","Beyazıt İlköğretim Okulu karşısı","Public directory / map listing"],
+  ["Oto","Oto Evliya Oğulları","Oto tamir","05316667011","","","1235. Sokak 22–30","Public directory / map listing"],
+  ["Oto","Özal Eman Otomotiv","Otomotiv","05304197445","","","Merkez, eski müftülük yanı","Public directory / map listing"],
+  ["Oto","Pilot Garage Erciş","Oto ekspertiz","05325694998","","","Haydarbey Mah. Yeni Sanayi Sitesi 1. Cadde No:1","Public directory / map listing"],
+  ["Oto","Yıldız Oto Yıkama & Kuaför","Oto yıkama","05382490265","","","432. Sokak, Erciş","Public directory / map listing"],
+  ["Diğer","Zirve Halı Yıkama Erciş","Halı yıkama","05352057130","","","Beyazıt Mahallesi","Public directory / map listing"],
+  ["Diğer","Özel Nadiroğlu Sürücü Kursu","Sürücü kursu","05455366565","","","Beyazıt İlköğretim Okulu karşısı, Van Yolu","Public directory / map listing"],
+  ["Oto","Opet Erciş","Akaryakıt istasyonu","04323517676","","","Zeylan Caddesi, Erciş","Public directory / map listing"],
+  ["Oto","TÜVTÜRK Araç Muayene İstasyonu","Araç muayene","08502228888","","","Nato Yolu Cad. No:86 D:70","Public directory / map listing"],
+  ["Yemek","Mevlana Lahmacun Salonu ve Pide Dünyası","Lahmacun ve pide","05433419576","4.9","","Camiikebir Mah. Kara Yusuf Bey Bulvarı No:163","Public directory / map listing"],
+  ["Yemek","Furkan Künefe","Künefe ve tatlı","05415844174","3.9","","Vanyolu Bulvarı No:68","Public directory / map listing"],
+  ["Yemek","İremnur Lahmacun","Lahmacun","","4.6","","Salihiye Mah. 219. Salihiye Sok. No:9B","Public directory / map listing"],
+  ["Kafe","People's Coffee Erciş","Kahve ve kafe","04323510505","4.1","","Vanyolu Mah. 229. Karadağlar Vanyolu Sokak","Public directory / map listing"],
+  ["Kafe","Zezu Breakfast & Cafe","Kahvaltı ve kafe","","4.6","","Vanyolu Mah. 206. PTT 2. Sok. No:4","Public directory / map listing"],
+  ["Yemek","Leyla’nın Yemek Dünyası","Restoran ve ev yemekleri","","4.5","","Erciş, Van","Public directory / map listing"],
+  ["Yemek","Çırağan Et Lokantası","Et lokantası","","4.6","","Erciş, Van","Public directory / map listing"],
+  ["Yemek","Mavi Lokantası","Lokanta","","4.4","","Vanyolu Mah., Van Yolu Blv. No:89, 65400 Erciş/Van","Public directory / map listing"],
+  ["Yemek","Babi Cafe & Bistro","Kafe ve bistro","05308300665","4.3","","Vanyolu Mah., Atakan Çelik Cd. No:1, 65400 Erciş/Van","Public directory / map listing"],
+  ["Yemek","Başak Ekmek","Ekmek ve unlu mamuller","05445733120","4.2","","Beyazıt Mah., Tugay 1. Cad. No:45, 65400 Erciş/Van","Public directory / map listing"],
+  ["Yemek","Hastane Çay Evi","Çay evi","","4.2","","Erciş, Van","Public directory / map listing"],
+  ["Yemek","Çağlayan Döner","Döner","","4.1","","Erciş, Van","Public directory / map listing"],
+  ["Kafe","Gençlik Kitap Kafe","Kitap kafe","","4.0","","Erciş, Van","Public directory / map listing"],
+  ["Yemek","Mizan Et Lokantası","Et lokantası","","4.1","","Erciş, Van","Public directory / map listing"]
+];
+
+// Updated contact, rating and address details from the user's latest business list.
+const suppliedUpdates = {
+"Nasibim Et Balık Lokantası": ["05423511200", 4.0, "Tekevler Mah., 1235. Sk. No:6, Erciş / Van"],
+"Birikim Kırtasiye": ["04323513000", 4.8, "Vanyolu Mah., Vanyolu Blv. No:23, Erciş / Van"],
+"İkizler Kitap Kırtasiye": ["05303911069", 3.8, "Vanyolu Mah., Alkoçlar Cd. No:10, Erciş / Van"],
+"Onur Kitap Kırtasiye": ["04323514545", 3.9, "Camikebir Mah., Harpin Yolu No:6, Erciş / Van"],
+"Erciş Limit Özel Öğretim Kursu": ["05433510022", 3.0, "Vanyolu Mah., Atakan Çelik İş Merkezi D:2, Erciş / Van"],
+"THE CAFE (ERCİŞ)": ["05423514422", 5.0, "Kışla Mah., Çiçek Cd. No:47/F, Erciş / Van"],
+"Istanbul Berberi": ["05433512211", 5.0, "Camikebir Mah., Emrah Sk., Erciş / Van"],
+"BİZİM MARKET": ["04323511234", 4.1, "Kışla Mah., Çınarlı Cd., Erciş / Van"],
+"Yuvam Market": ["04323515678", 4.0, "Vanyolu Mah., Tekevler Cd., Erciş / Van"],
+"Tekin İletişim": ["05423514411", 4.2, "Latifiye Mah., Zeylan Cd. No:8, Erciş / Van"],
+"Erciş Poyraz Otomotiv": ["05323517080", 4.5, "Sanayi Sitesi 3. Blok No:12, Erciş / Van"],
+"Oto Abbas Tamir ve Bakım Servisi": ["05356809010", 4.6, "Erciş Sanayi Sitesi 5. Blok, Erciş / Van"],
+"Kanarya Kebap Salonu": ["04323512515", 4.3, "Camikebir Mah., İnönü Cd., Erciş / Van"],
+"Bizim Market": ["04323511234", 4.1, "Kışla Mah., Çınarlı Cd., Erciş / Van"],
+"Erciş Yumoş Halı & Koltuk Yıkama Merkezi": ["05433514455", 4.6, "Beyazıt Mah., Çırağan Sk., Erciş / Van"],
+"İremnur Lahmacun": ["05413511265", 4.6, "Latifiye Mah., Çınarlı Cd. No:12, Erciş / Van"],
+"Zezu Breakfast & Cafe": ["05423512323", 4.6, "Vanyolu Mah., Tekevler Cd. No:78, Erciş / Van"],
+"Leyla’nın Yemek Dünyası": ["05433513322", 4.5, "Kışla Mah., Çınarlı Cd., Erciş / Van"],
+"Çırağan Et Lokantası": ["05426156565", 4.6, "Vanyolu Mah., Tekevler Cd. No:45, Erciş / Van"],
+"Mavi Lokantası": ["04323512112", 4.4, "Camikebir Mah., Çınarlı Cd., Erciş / Van"],
+"Hastane Çay Evi": ["", 4.2, "Kışla Mah., Yeni Devlet Hastanesi Karşısı, Erciş / Van"],
+"Çağlayan Döner": ["05423516611", 4.1, "Kışla Mah., Emrah Cd., Erciş / Van"],
+"Gençlik Kitap Kafe": ["04323512000", 4.0, "Kışla Mah., Gençlik Merkezi İçi, Erciş / Van"]
+};
+// Ratings retained from the business-rating list previously compiled for Erciş.
+const knownRatings = {
+  "Dönerci Doğan Ustanın Yeri": 4.8,
+  "ÖZBAY ET LOKANTASI": 4.8,
+  "Akademi Sahaf&Kırtasiye": 4.7,
+  "SAHRA KIRTASİYE": 5.0,
+  "Birikim Kırtasiye": 4.8,
+  "İkizler Kitap Kırtasiye": 3.8,
+  "Onur Kitap Kırtasiye": 3.9,
+  "ÇELEBİ KİTAP KIRTASİYE": 4.1,
+  "Erciş Fotokopi Dünyası": 5.0,
+  "Erciş Sahaf Kırtasiye": 5.0,
+  "Sporium Fitness Center": 4.2,
+  "Şampiyon Halı Saha": 4.3,
+  "Şampiyon Spor Salonu": 4.7,
+  "Erciş Flex Reformer Pilates": 5.0,
+  "ERCİŞ ÇÖZÜM KURS MERKEZİ": 5.0,
+  "Erciş Limit Özel Öğretim Kursu": 3.0,
+  "Elit Sürücü Kursu": 5.0,
+  "Süphan Sürücü Kursu": 5.0,
+  "Yunus Emre Cafe": 4.2,
+  "THE CAFE (ERCİŞ)": 5.0,
+  "Istanbul Berberi": 5.0,
+  "Ckn Saç Tasarım": 5.0,
+  "ÇAKIR ECZANESİ": 5.0,
+  "Eczane Doğu": 4.8,
+  "Allegro Coffee Lab": 4.6,
+  "Kahve Diyarı - Sahilkent": 3.6,
+  "Tesadüf Cafe": 3.7,
+  "Mualla Tatlı Krallığı": 4.3,
+  "Maciter Hotel": 4.0,
+  "Erciş Elit Otel": 4.3,
+  "Otokarne Oto Ekspertiz Erciş": 5.0,
+  "Blec Coffee": 5.0,
+  "DİLMAN GOLD OTEL ERCİŞ": 4.5,
+  "Sütçüzade Erciş": 4.5,
+  "Terra Pizza - Van Erciş": 3.5,
+  "Pizza Pizza Van - Erciş": 3.5,
+  "Hey Döner Van - Erciş": 2.7,
+  "Recep Ustanın Yeri": 5.0,
+  "Öz Ekmek Fabrikası": 4.5,
+  "Şampiyon Halı Saha/Şampiyon Spor": 4.3,
+  "Erciş Limit Özel Öğretim Kursu": 3.0,
+  "Nasibim Et Balık Lokantası": 4.0,
+  "İremnur Lahmacun": 4.6,
+  "Zezu Breakfast & Cafe": 4.6,
+  "Leyla’nın Yemek Dünyası": 4.5,
+  "Çırağan Et Lokantası": 4.6,
+  "Mavi Lokantası": 4.4,
+  "Hastane Çay Evi": 4.2,
+  "Çağlayan Döner": 4.1,
+  "Gençlik Kitap Kafe": 4.0,
+  "Babi Cafe & Bistro": 4.3,
+  "Başak Ekmek": 4.2,
+  "Mevlana Lahmacun Salonu ve Pide Dünyası": 4.9,
+  "Furkan Künefe": 3.9,
+  "People's Coffee Erciş": 4.1
+};
+const pastedRatings = {
+  "Bizim Döner": 4.1,
+  "Dönerci Doğan Ustanın Yeri": 4.5,
+  "ÖZBAY ET LOKANTASI": 4.9,
+  "Pizza Pizza Van - Erciş": 3.9,
+  "Komagene": 4.2,
+  "Nasibim Et Balık Lokantası": 4.0,
+  "Sahilkent Dönercisi": 4.1,
+  "Zirve Tavuk Döner Salonu": 4.3,
+  "Tantunix Erciş": 4.0,
+  "Seydaoğlu Lokanta": 4.4,
+  "Nesh Waffle Cafe & Bistro": 4.3,
+  "KURD GASTRONOMIA RESTAURANT": 4.6,
+  "Mahar-et Izgara Restaurant": 4.5,
+  "Furkan Künefe": 4.4,
+  "Gözde Balık Ekmek": 4.2,
+  "Doy Doy Lokanta": 4.1,
+  "Diyarbakır Ciğer Showroom": 4.5,
+  "Destan Döner Erciş": 4.2,
+  "Kanarya Kebap Salonu": 4.3,
+  "Leyla’nın Yemek Dünyası": 4.6,
+  "Çırağan Et Lokantası": 4.2,
+  "Mavi Lokantası": 4.0,
+  "Mizan Et Lokantası": 4.3,
+  "ET-SA Nizam Usta Erciş": 4.5,
+  "Ada Ocakbaşı": 4.1,
+  "Hey Döner Van - Erciş": 4.0,
+  "Recep Ustanın Yeri": 4.4,
+  "Mevlana Lahmacun Salonu ve Pide Dünyası": 4.3,
+  "İremnur Lahmacun": 4.2,
+  "Çağlayan Döner": 4.0,
+  "THE CAFE (ERCİŞ)": 4.5,
+  "Blec Coffee": 4.7,
+  "Alamut Cafe (Kapalı)": 3.8,
+  "Kahve Diyarı - Sahilkent": 4.1,
+  "Cafe Bahane": 4.0,
+  "Babil Cafe": 4.2,
+  "İstanbul Cafe Erciş": 3.9,
+  "Allegro Coffee Lab": 4.6,
+  "Tesadüf Cafe": 4.1,
+  "Semiramis Tekne Caffe": 4.3,
+  "Zezu Breakfast & Cafe": 4.6,
+  "Demlik Kahvaltı Katmer Künefe": 4.4,
+  "Tömbeki Kafe": 4.0,
+  "The Moon Cafe": 4.2,
+  "Santra Playstation Cafe": 4.3,
+  "Last Summer Kahvaltı Salonu": 4.5,
+  "Değirmen Cafe": 4.1,
+  "Cafe Tost": 4.2,
+  "Cafe Paula": 4.0,
+  "Cafe Deniz Et Ve Balık": 4.2,
+  "Almina Caffe Okey Salonu": 3.9,
+  "Aşina Kahvaltı Salonu": 4.4,
+  "People's Coffee Erciş": 4.5,
+  "Babi Cafe & Bistro": 4.1,
+  "Hastane Çay Evi": 3.8,
+  "Gençlik Kitap Kafe": 4.7,
+  "Mualla Tatlı Krallığı": 4.6,
+  "Manolya Pastanesi": 4.3,
+  "Pasta Love Erciş": 4.4,
+  "Öz Ekmek Fabrikası": 4.2,
+  "Çıtır Simit": 4.1,
+  "Sütçüzade Erciş": 4.5,
+  "Başak Ekmek": 4.0,
+  "Akademi Sahaf&Kırtasiye": 4.6,
+  "SAHRA KIRTASİYE": 4.5,
+  "Birikim Kırtasiye": 4.2,
+  "Birikim 2 Kırtasiye": 4.1,
+  "İkizler Kitap Kırtasiye": 4.4,
+  "Onur Kitap Kırtasiye": 4.3,
+  "ÇELEBİ KİTAP KIRTASİYE": 4.5,
+  "Kampüs Sahaf Kitap Kırtasiye": 4.6,
+  "Çilek Sahaf & Fotokopi Çekim Merkezi": 4.7,
+  "Türkmenoğlu Bilişim.Kırt.Ltd.Şti.": 4.3,
+  "Erciş Fotokopi Dünyası": 4.5,
+  "Sporium Fitness Center": 4.4,
+  "Şampiyon Halı Saha": 4.2,
+  "Şampiyon Spor Salonu": 4.1,
+  "Erciş Flex Reformer Pilates": 4.8,
+  "Erciş Arena Halı Saha": 4.3,
+  "X Power Center": 4.5,
+  "Şampiyon Bilardo Cafe": 4.2,
+  "ATAVAN Spor Tesisleri": 4.4,
+  "ERCİŞ ÇÖZÜM KURS MERKEZİ": 4.6,
+  "Erciş Hacettepe Özel Öğretim Kursu": 4.5,
+  "Erciş Limit Özel Öğretim Kursu": 4.4,
+  "Marmara Vip Akademi Etüt Merkezi": 4.3,
+  "Erciş Doğru Cevap (Hedef) Özel Öğretim Kursu": 4.5,
+  "Özel Erciş Uğur Özel Öğretim Kursu": 4.2,
+  "6-H Özel Güvenlik Kursu": 4.7,
+  "Özel Erciş Final Özel Öğretim Kursu": 4.3,
+  "Erciş SRC Kurs": 4.4,
+  "Özel Nadiroğlu Sürücü Kursu": 4.5,
+  "ÇAKIR ECZANESİ": 4.5,
+  "YALÇINKAYA ECZANESİ": 4.3,
+  "AKILLI ECZANE": 4.4,
+  "BİRLİK ECZANESİ": 4.2,
+  "Öz Yaşam Eczanesi": 4.3,
+  "Tekbir Eczanesi": 4.1,
+  "Lavanta Eczanesi": 4.5,
+  "ALAY ECZANESİ": 4.0,
+  "ARJİN ECZANESİ": 4.2,
+  "ARSLAN ECZANESİ": 4.3,
+  "BİLİCİ ECZANESİ": 4.1,
+  "BÜYÜK ECZANESİ": 4.2,
+  "ÇAĞLAR ECZANESİ": 4.0,
+  "ÇELEBİ ECZANESİ": 4.4,
+  "ÇİÇEK ECZANESİ": 4.3,
+  "ÇINARLI ECZANESİ": 4.5,
+  "DEFNE ECZANESİ": 4.2,
+  "DERMAN ECZANESİ": 4.1,
+  "DEVA ECZANESİ": 4.3,
+  "DOĞU ECZANESİ": 4.0,
+  "EMEK ECZANESİ": 4.2,
+  "ENGİN ECZANESİ": 4.1,
+  "ERCİŞ ECZANESİ": 4.4,
+  "ERKAN ECZANESİ": 4.2,
+  "ERVAN ECZANESİ": 4.3,
+  "EVİN ECZANESİ": 4.1,
+  "GÜNEŞ ECZANESİ": 4.2,
+  "GÜRBÜZ ECZANESİ": 4.3,
+  "HANÇER ECZANESİ": 4.0,
+  "Erciş Sağlık Kabini": 4.6,
+  "Özel Erciş Med Hastanesi": 3.6,
+  "Aslan Dental Medikal": 4.3,
+  "Gözde Optik": 4.4,
+  "Ckn Saç Tasarım": 4.5,
+  "Istanbul Berberi": 4.3,
+  "Erciş Erkek Kuaförü": 4.1,
+  "Mert Erkek Kuaförü": 4.2,
+  "RK Hair Studio": 4.7,
+  "MST Erkek Kuaför": 4.4,
+  "Mercan Erkek Kuaförü": 4.2,
+  "Melissa Bayan Kuaförü": 4.3,
+  "Kuaför RÉZAN": 4.6,
+  "Kuaför Halime & Elif": 4.5,
+  "Favori Erkek Kuaförü": 4.1,
+  "Fiyaka Kuaför Salonu": 4.2,
+  "Star Kuaför": 4.0,
+  "Ceren Kuaför": 4.3,
+  "Saremsi Güzellik ve Bakım Salonu": 4.8,
+  "Lilium Güzellik Salonu": 4.4,
+  "Maciter Hotel": 4.2,
+  "DİLMAN GOLD OTEL ERCİŞ": 4.3,
+  "Dilman Apart Otel": 4.1,
+  "Erciş Elit Otel": 4.0,
+  "BİZİM MARKET": 4.1,
+  "Yuvam Market": 4.0,
+  "A101 (Vanyolu)": 3.9,
+  "ŞOK (Vanyolu)": 4.0,
+  "Toz Market": 4.2,
+  "Aktekinler Market": 4.1,
+  "Erciş Poyraz Otomotiv": 4.5,
+  "Oto Abbas Tamir ve Bakım Servisi": 4.6,
+  "Otokarne Oto Ekspertiz Erciş": 4.7,
+  "Kırar-Otomotiv": 4.3,
+  "Dünya Otomotiv": 4.4,
+  "İslam Otomotiv": 4.2,
+  "Sevinçoğlu Otomotiv": 4.1,
+  "Metin Oto Elektrik": 4.5,
+  "Merkez Oto Lastik Erciş": 4.3,
+  "Kral Oto Lastik Erciş Yol Yardım": 4.8,
+  "Kral Oto Elektronik Erciş": 4.6,
+  "LastikPark - Doğanlar Group": 4.5,
+  "Lastik Pazarı": 4.2,
+  "Garaj 35 Garage Tuning": 4.4,
+  "Aram Oto Kaporta Boya": 4.3,
+  "Fatih Oto Boyasız Göçük Düzeltme": 4.7,
+  "Eyüp Oto": 4.1,
+  "Ecir Oto Galeri": 4.3,
+  "Can Oto Galeri": 4.2,
+  "Doğan Oto Kuaför ve Oto Aksesuar": 4.5,
+  "Güven Oto Gaz": 4.4,
+  "Nadiroğlu OTOPRATİK": 4.6,
+  "Oto Evliya Oğulları": 4.2,
+  "Özal Eman Otomotiv": 4.3,
+  "Pilot Garage Erciş": 4.8,
+  "Yıldız Oto Yıkama & Kuaför": 4.2,
+  "Soğuk Duş Self Servis Oto Yıkama": 4.4,
+  "Opet Erciş": 4.3,
+  "TÜVTÜRK Araç Muayene İstasyonu": 3.7,
+  "TEKNOMAX": 4.1,
+  "Tekin İletişim": 4.2,
+  "ES GSM": 4.0,
+  "Turkcell İletişim Merkezi (Vanyolu)": 4.1,
+  "Vodafone Cep Merkezi (Kışla)": 3.9,
+  "TEKNO VAN": 4.3,
+  "Teknikelektronik": 4.2,
+  "Mebax Toptan GSM Aksesuar": 4.5,
+  "Dünya İletişim": 4.1,
+  "Mutlunet Ödeme Noktası Yasir İletişim": 4.3,
+  "Sürat Kargo Erciş": 3.2,
+  "Yurtiçi Kargo Erciş": 3.4,
+  "Naim Turizm Van Erciş Arası Havalimanı Servisi": 4.4,
+  "Er-Tem Halı Yıkama Merkezi": 4.5,
+  "Erciş Yumoş Halı & Koltuk Yıkama Merkezi": 4.6,
+  "Zirve Halı Yıkama Erciş": 4.3,
+  "Zengin Veteriner Kliniği": 4.8,
+  "Ceylan Veteriner Kliniği": 4.7,
+  "Sancak Cam": 4.2,
+  "FOTO ULAŞ": 4.5,
+  "Foto Sevinç": 4.3,
+  "Foto Roza": 4.4,
+  "Foto Nuri": 4.1,
+  "Foto Kenan": 4.2,
+  "Foto Erciş": 4.3,
+  "Foto Cafer": 4.0
+};
+
+data.forEach(x => {
+  const u = suppliedUpdates[x[1]];
+  if (!u) return;
+  while (x.length < 7) x.push("");
+  x[3] = u[0]; x[4] = u[1]; x[6] = u[2];
+});
+// Apply the exact saved ratings after contact updates so they are not overwritten.
+data.forEach(x => {
+  const aliases = {
+    "Terra Pizza - Van Erciş": "Pizza Pizza Van - Erciş",
+    "Terra Pizza - Van Erciş (Pizza Pizza)": "Pizza Pizza Van - Erciş",
+    "Blec Coffee | Van Erciş Şubesi": "Blec Coffee",
+    "Kahve Diyarı – Sahilkent": "Kahve Diyarı - Sahilkent",
+    "Zezu Kahvaltı & Cafe": "Zezu Breakfast & Cafe",
+    "Furkan Künefe / Furkan Künefe Erciş": "Furkan Künefe",
+    "BİZİM MARKET / Bizim Market": "BİZİM MARKET",
+    "Kampüs Sahaf Kitap Kırtasiye / Erciş Sahaf Kırtasiye": "Kampüs Sahaf Kitap Kırtasiye",
+    "Erciş Sahaf Kırtasiye": "Kampüs Sahaf Kitap Kırtasiye",
+    "Blec Coffee | Van Erciş Şubesi": "Blec Coffee",
+    "Alamut Cafe": "Alamut Cafe (Kapalı)",
+    "Kahve Diyarı – Sahilkent": "Kahve Diyarı - Sahilkent",
+    "Zezu Kahvaltı & Cafe": "Zezu Breakfast & Cafe",
+    "Furkan Künefe Erciş": "Furkan Künefe",
+    "Bizim Market": "BİZİM MARKET",
+    "Şampiyon Halisaha": "Şampiyon Halı Saha",
+    "Öz Ekmek Fabrikası ve Taş Fırın Ekmeği": "Öz Ekmek Fabrikası",
+    "Terra Pizza - Van Erciş": "Pizza Pizza Van - Erciş"
+  };
+  const rk = pastedRatings[x[1]] !== undefined ? x[1] : aliases[x[1]];
+  if (rk && pastedRatings[rk] !== undefined) x[4] = pastedRatings[rk];
+  else if (knownRatings[x[1]] !== undefined) x[4] = knownRatings[x[1]];
+});
+
+// Replace ordinary emoji with actual 3D-style Fluent Emoji PNG assets where available.
+const fluent3d = {
+  "🍽️":"Plate with cutlery/plate_with_cutlery_3d.png", "📚":"Books/books_3d.png", "⚽":"Soccer ball/soccer_ball_3d.png", "🎓":"Graduation cap/graduation_cap_3d.png", "☕":"Hot beverage/hot_beverage_3d.png", "✂️":"Scissors/scissors_3d.png", "💊":"Pill/pill_3d.png", "🛒":"Shopping cart/shopping_cart_3d.png", "🏨":"Hotel/hotel_3d.png", "📱":"Mobile phone/mobile_phone_3d.png", "🚗":"Automobile/automobile_3d.png", "🧰":"Toolbox/toolbox_3d.png", "📍":"Round pushpin/round_pushpin_3d.png", "⭐":"Star/star_3d.png", "📞":"Telephone receiver/telephone_receiver_3d.png"
+};
+const fluentBase = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/";
+function convertEmoji3D(root=document){
+ root.querySelectorAll(".emoji3d").forEach(el=>{
+  if(el.querySelector("img.emoji3d-img")) return;
+  const emoji=el.textContent.trim(), asset=fluent3d[emoji];
+  if(!asset) return;
+  const img=document.createElement("img"); img.className="emoji3d-img"; img.alt=emoji; img.loading="lazy"; img.src=fluentBase+asset.replace("/", "/3D/");
+  img.onerror=()=>{img.replaceWith(document.createTextNode(emoji));};
+  el.replaceChildren(img);
+ });
+}
+convertEmoji3D();
+
+const grid=document.getElementById("grid");
+const count=document.getElementById("count");
+let active="Tümü";
+let showFavorites=false;
+let favorites=new Set();
+try{favorites=new Set(JSON.parse(localStorage.getItem("ercisRehberiFavorites")||"[]"));}catch(e){}
+function saveFavorites(){try{localStorage.setItem("ercisRehberiFavorites",JSON.stringify([...favorites]));}catch(e){}}
+
+function mapUrl(name,address=""){
+ const query=(address||name+" Erciş Van").trim();
+ return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(query);
+}
+function directionsUrl(name,address=""){
+ const destination=(address||name+" Erciş Van").trim();
+ return "https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(destination)+"&travelmode=driving";
+}
+function normalizePhone(p){
+ if(!p)return "";
+ if(p.startsWith("0"))return "+90"+p.slice(1);
+ if(p.startsWith("444"))return p;
+ return p;
+}
+function render(){
+ const q=document.getElementById("search").value.toLocaleLowerCase("tr-TR").trim();
+ let items=data.filter(x=>{
+   const categoryFilter=document.getElementById("filterCategory")?.value||"Tümü";
+   const minRating=Number(document.getElementById("minRating")?.value||0);
+   const needPhone=!!document.getElementById("withPhone")?.checked;
+   const needAddress=!!document.getElementById("withAddress")?.checked;
+   const text=(x[1]+" "+x[0]+" "+x[2]+" "+(x[3]||"")+" "+(x[6]||"")).toLocaleLowerCase("tr-TR");
+   return (active==="Tümü"||x[0]===active) &&
+     (categoryFilter==="Tümü"||x[0]===categoryFilter) && text.includes(q) &&
+     (!showFavorites||favorites.has(x[1])) &&
+     (minRating===0||(Number(x[4])||0)>=minRating) &&
+     (!needPhone||!!x[3]) && (!needAddress||!!x[6]);
+ });
+ const sort=document.getElementById("sortSelect")?.value||"default";
+ if(sort==="name") items.sort((a,b)=>a[1].localeCompare(b[1],"tr"));
+ if(sort==="rating") items.sort((a,b)=>(Number(b[4])||0)-(Number(a[4])||0));
+ count.textContent=items.length+" işletme gösteriliyor";
+ document.getElementById("totalStat").textContent=data.length+" işletme";
+ if(!items.length){grid.innerHTML='<div class="empty"><div style="font-size:32px;margin-bottom:8px">🔎</div><b>İşletme bulunamadı</b><div style="margin-top:6px;font-size:13px">Arama kelimesini değiştirebilir veya favori filtresini kapatabilirsin.</div></div>';return;}
+ grid.innerHTML=items.map(x=>{
+   const [cat,name,desc,phone,rating,photo,address,photoSource]=x;
+   const saved=favorites.has(name);
+   const stars=rating?`<div class="rating"><span class="emoji3d">⭐</span> ${Number(rating).toFixed(1)} / 5</div>`:`<div class="rating" style="color:#7b8790"><span class="emoji3d">⭐</span> Puan bilgisi yok</div>`;
+   const tel=phone?`<a class="phone" href="tel:${normalizePhone(phone)}"><span class="emoji3d">📞</span> Ara</a>`:`<a class="phone no-phone" target="_blank" rel="noopener" href="${mapUrl(name,address||"")}"><span class="emoji3d">📞</span> Numarayı bul</a>`;
+   return `<article class="card">
+     <div class="image-wrap"><img class="card-img" src="${photo || placeholder(cat)}" alt="${name}" loading="lazy" onerror="this.onerror=null;this.src=placeholder(cat);this.dataset.fallback='true';"><button class="favorite-btn ${saved?'saved':''}" type="button" aria-label="${saved?'Favorilerden çıkar':'Favorilere ekle'}" title="${saved?'Favorilerden çıkar':'Favorilere ekle'}" onclick="toggleFavorite('${name.replace(/'/g,"\\'")}')">${saved?'♥':'♡'}</button><span class="rating-badge"><b>★</b> ${rating?Number(rating).toFixed(1):"—"}</span></div>
+     <div class="card-body">
+       <h3>${name}</h3>
+       <div class="desc">${desc}</div>
+       ${`<div class="address"><span class="emoji3d">📍</span> ${address ? address : `Açık adres doğrulanamadı · <a target="_blank" rel="noopener" href="${mapUrl(name)}">Adresi bul</a>`}</div>`}
+       ${stars}
+       <div class="actions">
+         <a class="map" target="_blank" rel="noopener" href="${mapUrl(name,address||"")}"><span class="emoji3d">📍</span> Haritada Gör</a>
+         <a class="route" target="_blank" rel="noopener" href="${directionsUrl(name,address||"")}">🧭 Yol tarifi</a>
+         ${tel}
+       </div><div class="actions"><button class="report-btn" type="button" data-report="${encodeURIComponent(name)}">✎ Bilgi bildir</button></div>
+     </div>
+   </article>`;
+ }).join("");
+ convertEmoji3D(grid); // Kartlar her yenilendiğinde işletme ikonlarını da 3D görsellere dönüştür.
+ grid.querySelectorAll("[data-report]").forEach(btn=>btn.addEventListener("click",()=>openReport(decodeURIComponent(btn.dataset.report))));
+}
+document.getElementById("search").addEventListener("input",render);
+document.querySelectorAll("#categories button").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+   document.querySelectorAll("#categories button").forEach(b=>b.classList.remove("active"));
+   btn.classList.add("active");
+   active=btn.dataset.cat;
+   render();
+ });
+});
+document.getElementById("sortSelect").addEventListener("change",render);
+document.getElementById("themeToggle").addEventListener("click",()=>{document.body.classList.toggle("dark");const dark=document.body.classList.contains("dark");document.getElementById("themeToggle").textContent=dark?"☀ Açık tema":"☾ Koyu tema";try{localStorage.setItem("ercisRehberiTheme",dark?"dark":"light");}catch(e){}});
+try{if(localStorage.getItem("ercisRehberiTheme")==="dark"){document.body.classList.add("dark");document.getElementById("themeToggle").textContent="☀ Açık tema";}}catch(e){}
+document.getElementById("favoritesToggle").addEventListener("click",()=>{showFavorites=!showFavorites;const b=document.getElementById("favoritesToggle");b.classList.toggle("active",showFavorites);b.textContent=showFavorites?"♥ Favoriler gösteriliyor":"♡ Favorilerim";render();});
+function toggleFavorite(name){if(favorites.has(name))favorites.delete(name);else favorites.add(name);saveFavorites();render();}
+// Gelişmiş arama filtreleri
+const categoryFilter=document.getElementById("filterCategory");
+[...new Set(data.map(x=>x[0]))].sort((a,b)=>a.localeCompare(b,"tr")).forEach(cat=>{const opt=document.createElement("option");opt.value=cat;opt.textContent=cat;categoryFilter.appendChild(opt);});
+["filterCategory","minRating","withPhone","withAddress"].forEach(id=>document.getElementById(id).addEventListener("change",render));
+document.getElementById("clearFilters").addEventListener("click",()=>{document.getElementById("search").value="";categoryFilter.value="Tümü";document.getElementById("minRating").value="0";document.getElementById("withPhone").checked=false;document.getElementById("withAddress").checked=false;document.getElementById("sortSelect").value="default";active="Tümü";document.querySelectorAll("#categories button").forEach(b=>b.classList.toggle("active",b.dataset.cat==="Tümü"));showFavorites=false;document.getElementById("favoritesToggle").classList.remove("active");document.getElementById("favoritesToggle").textContent="♡ Favorilerim";render();});
+function selectCategory(cat){active=cat;categoryFilter.value=cat;document.querySelectorAll("#categories button").forEach(b=>b.classList.toggle("active",b.dataset.cat===cat));render();document.getElementById("businesses").scrollIntoView({behavior:"smooth",block:"start"});}
+function showFavoritesOnly(){showFavorites=true;const b=document.getElementById("favoritesToggle");b.classList.add("active");b.textContent="♥ Favoriler gösteriliyor";render();document.getElementById("businesses").scrollIntoView({behavior:"smooth",block:"start"});}
+const reportModal=document.getElementById("reportModal");let reportTarget="";
+function openReport(name){reportTarget=name;document.getElementById("reportBusinessName").textContent=name;document.getElementById("reportForm").reset();document.getElementById("reportForm").hidden=false;document.getElementById("reportResult").hidden=true;document.getElementById("copyStatus").textContent="";reportModal.hidden=false;document.body.style.overflow="hidden";document.getElementById("reportType").focus();}
+function closeReport(){reportModal.hidden=true;document.body.style.overflow="";}
+document.getElementById("closeReport").addEventListener("click",closeReport);reportModal.addEventListener("click",e=>{if(e.target===reportModal)closeReport();});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!reportModal.hidden)closeReport();});
+document.getElementById("reportForm").addEventListener("submit",e=>{e.preventDefault();const type=document.getElementById("reportType").value;const details=document.getElementById("reportDetails").value.trim();const contact=document.getElementById("reportContact").value.trim();const biz=data.find(x=>x[1]===reportTarget);const report=`Erciş Rehberi — İşletme Bilgi Bildirimi\nİşletme: ${reportTarget}\nKategori: ${biz?biz[0]:"Belirtilmedi"}\nMevcut adres: ${biz&&biz[6]?biz[6]:"Kayıtlı değil"}\nKonu: ${type}\nAçıklama: ${details}\nİletişim (isteğe bağlı): ${contact||"Belirtilmedi"}`;document.getElementById("reportOutput").value=report;document.getElementById("reportForm").hidden=true;document.getElementById("reportResult").hidden=false;});
+document.getElementById("copyReport").addEventListener("click",async()=>{const txt=document.getElementById("reportOutput").value;try{await navigator.clipboard.writeText(txt);document.getElementById("copyStatus").textContent="Kopyalandı!";}catch(e){const ta=document.getElementById("reportOutput");ta.focus();ta.select();try{document.execCommand("copy");document.getElementById("copyStatus").textContent="Kopyalandı!";}catch(err){document.getElementById("copyStatus").textContent="Metni seçip kopyalayabilirsin.";}}});
+
+function weatherLabel(code){if(code===0)return ["Açık","☀️"];if([1,2].includes(code))return ["Az bulutlu","🌤️"];if(code===3)return ["Kapalı","☁️"];if([45,48].includes(code))return ["Sisli","🌫️"];if([51,53,55,56,57].includes(code))return ["Çisenti","🌦️"];if([61,63,65,66,67,80,81,82].includes(code))return ["Yağmurlu","🌧️"];if([71,73,75,77,85,86].includes(code))return ["Karlı","❄️"];if([95,96,99].includes(code))return ["Gök gürültülü","⛈️"];return ["Değişken","🌤️"];}
+async function loadWeather(){try{const url="https://api.open-meteo.com/v1/forecast?latitude=39.03&longitude=43.36&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Europe%2FIstanbul&forecast_days=3";const res=await fetch(url);if(!res.ok)throw new Error("weather");const w=await res.json();const c=w.current;const [label,icon]=weatherLabel(c.weather_code);document.getElementById("weatherTemp").textContent=Math.round(c.temperature_2m)+"°C";document.getElementById("weatherDesc").textContent=label;document.getElementById("weatherIcon").textContent=icon;document.getElementById("weatherFeels").textContent=Math.round(c.apparent_temperature)+"°C";document.getElementById("weatherHumidity").textContent=c.relative_humidity_2m+"%";document.getElementById("weatherWind").textContent=Math.round(c.wind_speed_10m)+" km/sa";const days=w.daily.time;document.getElementById("forecast").innerHTML=days.map((day,i)=>{const [lab,ico]=weatherLabel(w.daily.weather_code[i]);const date=new Date(day+"T12:00:00");const dayName=i===0?"Bugün":date.toLocaleDateString("tr-TR",{weekday:"short"});return `<div class="forecast-day"><b>${dayName}</b><span class="ficon">${ico}</span><strong>${Math.round(w.daily.temperature_2m_max[i])}° <span style="color:#b8d3f0;font-weight:600">${Math.round(w.daily.temperature_2m_min[i])}°</span></strong></div>`;}).join("");document.getElementById("weatherUpdated").textContent="Erciş için güncel veri • " + new Date().toLocaleTimeString("tr-TR",{hour:"2-digit",minute:"2-digit"})+" itibarıyla";}catch(e){document.getElementById("weatherDesc").textContent="Hava durumu şu anda alınamadı";document.getElementById("weatherUpdated").textContent="İnternet bağlantını kontrol edip sayfayı yenile.";document.getElementById("forecast").innerHTML='<div class="forecast-day" style="grid-column:1/-1">Tahmin verisi geçici olarak kullanılamıyor.</div>';}}
+render();
+loadWeather();
+</script>
+
+<script>
+(function(){
+ const host=document.getElementById('lifeWorkspace');
+ if(!host)return;
+ const storeKey={offers:'ercisLocalOffersV1',events:'ercisLocalEventsV1',listings:'ercisLocalListingsV1',notices:'ercisLocalNoticesV1',popular:'ercisLocalPopularV1'};
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const getList=k=>{try{const v=JSON.parse(localStorage.getItem(storeKey[k])||'[]');return Array.isArray(v)?v:[]}catch(e){return[]}};
+ const putList=(k,v)=>{try{localStorage.setItem(storeKey[k],JSON.stringify(v));return true}catch(e){return false}};
+ const note='Bu statik sürümde kayıtlar yalnızca bu cihazın tarayıcısında saklanır. Herkese açık yayımlama ve kullanıcı hesapları için sunucu bağlantısı gerekir.';
+ function formField(label,id,placeholder,type='text',wide=false,required=true){return `<label class="${wide?'wide':''}">${label}<input id="${id}" type="${type}" placeholder="${placeholder}" ${required?'required':''}></label>`}
+ function listCards(key,empty){const arr=getList(key).slice().reverse();if(!arr.length)return `<p>${empty}</p>`;return `<div class="life-list">${arr.map(x=>`<article class="life-item"><b>${esc(x.title)}</b><small>${esc(x.meta||'')} ${x.date?'• '+esc(x.date):''}</small><p>${esc(x.body||'')}</p>${x.contact?`<small>İletişim: ${esc(x.contact)}</small>`:''}</article>`).join('')}</div>`}
+ function show(k){
+  if(k==='usta'){
+   host.innerHTML=`<h3>🧰 Erciş'te Usta Bul</h3><p>Rehberdeki işletmeler arasında hizmet türüne göre ara. Sonuçlardan harita veya yol tarifi bağlantısını açabilirsin.</p><form class="life-form" id="ustaForm"><label class="wide">Ne tür bir hizmet arıyorsun?<input id="ustaQuery" placeholder="Örn. oto tamir, elektrik, tesisat, telefon, berber" required></label><div class="wide"><button class="life-action">Usta / hizmet ara</button></div></form><div id="ustaResults"></div><div class="life-note">${note}</div>`;
+   document.getElementById('ustaForm').addEventListener('submit',e=>{e.preventDefault();const q=document.getElementById('ustaQuery').value.toLocaleLowerCase('tr-TR').trim();const words=q.split(/\s+/).filter(Boolean);const rows=(typeof data!=='undefined'?data:[]).filter(x=>(x[0]+' '+x[1]+' '+x[2]+' '+(x[6]||'')).toLocaleLowerCase('tr-TR').includes(q)||words.some(w=>(x[0]+' '+x[1]+' '+x[2]+' '+(x[6]||'')).toLocaleLowerCase('tr-TR').includes(w))).slice(0,20);document.getElementById('ustaResults').innerHTML=rows.length?rows.map(x=>`<div class="life-business-row"><div><b>${esc(x[1])}</b><small>${esc(x[0])} · ${esc(x[2]||'')}${x[6]?' · '+esc(x[6]):''}</small></div><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((x[1]+' '+(x[6]||'Erciş Van')))}">Haritada aç ↗</a></div>`).join(''):'<p>Bu kelimeyle eşleşen kayıt bulunamadı. Daha kısa veya farklı bir kelime dene.</p>';});
+   return;
+  }
+  if(k==='nearby'){
+   host.innerHTML=`<h3>📍 Yakınımda Bul</h3><p>Konum izni verirsen Google Haritalar'da bulunduğun noktaya yakın işletmeleri arayabilirsin. Konumun bu sayfada sunucuya gönderilmez.</p><div class="life-form"><label>Ne arıyorsun?<select id="nearbyType"><option value="işletmeler">Tüm işletmeler</option><option value="restoran">Restoran</option><option value="eczane">Eczane</option><option value="market">Market</option><option value="oto tamir">Oto tamir</option><option value="kafe">Kafe</option><option value="usta">Usta / tamirci</option></select></label><div style="display:flex;align-items:end"><button class="life-action" id="nearbyGo" type="button">Konumumu kullan ve haritada ara</button></div></div><div class="life-status" id="nearbyStatus"></div><div class="life-note">Konum izni vermek istemezsen Google Haritalar'da Erciş çevresinde arama yapabilirsin. ${esc(note)}</div>`;
+   document.getElementById('nearbyGo').addEventListener('click',()=>{const type=document.getElementById('nearbyType').value;const st=document.getElementById('nearbyStatus');if(!navigator.geolocation){st.textContent='Bu tarayıcı konum özelliğini desteklemiyor. Erciş haritası açılıyor.';window.open('https://www.google.com/maps/search/'+encodeURIComponent(type+' Erciş Van'),'_blank','noopener');return;}st.textContent='Konum izni bekleniyor…';navigator.geolocation.getCurrentPosition(pos=>{const q=encodeURIComponent(type);const url=`https://www.google.com/maps/search/${q}/@${pos.coords.latitude},${pos.coords.longitude},14z`;window.open(url,'_blank','noopener');st.textContent='Harita yeni sekmede açıldı.'},()=>{st.textContent='Konum alınamadı; Erciş çevresinde arama açılıyor.';window.open('https://www.google.com/maps/search/'+encodeURIComponent(type+' Erciş Van'),'_blank','noopener')},{enableHighAccuracy:false,timeout:8000,maximumAge:120000});});
+   return;
+  }
+  if(k==='popular'){
+   const counts=getList('popular').sort((a,b)=>b.count-a.count);
+   host.innerHTML=`<h3>🔥 En Çok İlgi Gören İşletmeler</h3><p>Bu liste, bu cihazda işletme kartlarına tıklanma sayısını takip eder. Tüm ziyaretçilerin ortak istatistiği değildir.</p>${counts.length?counts.slice(0,12).map((x,i)=>`<div class="life-business-row"><div><b>${i+1}. ${esc(x.name)}</b><small>${x.count} kart tıklaması · cihaz içi istatistik</small></div><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x.name+' Erciş Van')}">Haritada aç ↗</a></div>`).join(''):'<p>Henüz tıklama kaydı yok. İşletme kartlarını açtıkça bu liste oluşacak.</p>'}<div style="margin-top:12px"><button class="life-secondary" type="button" id="popularReset">Bu cihazdaki sayacı sıfırla</button></div><div class="life-note">${note}</div>`;
+   document.getElementById('popularReset').addEventListener('click',()=>{putList('popular',[]);show('popular')});return;
+  }
+  if(k==='manage'){
+   const options=(typeof data!=='undefined'?data:[]).map(x=>`<option value="${esc(x[1])}">${esc(x[1])}</option>`).join('');
+   host.innerHTML=`<h3>🏪 İşletmemi Yönet</h3><p>İşletme bilgilerini güncellemek veya işletmenin size ait olduğunu bildirmek için talep metni hazırla.</p><form class="life-form" id="manageForm"><label>İşletme<select id="manageBusiness" required><option value="">İşletmeni seç</option>${options}</select></label><label>Adın / işletmedeki görevin<input id="managePerson" placeholder="İsteğe bağlı"></label><label class="wide">Düzeltme veya talep<textarea id="manageDetails" placeholder="Telefon, adres, çalışma saati, fotoğraf vb." required></textarea></label><div class="wide"><button class="life-action">Talep metnini hazırla</button></div></form><div id="manageResult"></div><div class="life-note">${note} Talep metni otomatik olarak gönderilmez.</div>`;
+   document.getElementById('manageForm').addEventListener('submit',e=>{e.preventDefault();const msg=`Erciş Rehberi işletme güncelleme talebi\\nİşletme: ${document.getElementById('manageBusiness').value}\\nİlgili kişi: ${document.getElementById('managePerson').value||'Belirtilmedi'}\\nTalep: ${document.getElementById('manageDetails').value}\\n\\nBilgilerin doğrulanmasını rica ederim.`;document.getElementById('manageResult').innerHTML=`<p>Talep metni hazır. Kopyalayıp site yöneticisine gönderebilirsin.</p><textarea id="manageOutput" rows="6" style="width:100%;padding:12px;border:1px solid #dce4f0;border-radius:10px">${esc(msg)}</textarea><button type="button" class="life-action" id="manageCopy">Metni kopyala</button><span class="life-status" id="manageStatus"></span>`;document.getElementById('manageCopy').addEventListener('click',async()=>{const ta=document.getElementById('manageOutput');try{await navigator.clipboard.writeText(ta.value);document.getElementById('manageStatus').textContent='Kopyalandı.'}catch(err){ta.select();document.execCommand('copy');document.getElementById('manageStatus').textContent='Kopyalama denendi; metni seçip elle de kopyalayabilirsin.'}})});return;
+  }
+  const pendingKey='ercisPendingSubmissionsV1';
+  const getPending=()=>{try{const v=JSON.parse(localStorage.getItem(pendingKey)||'[]');return Array.isArray(v)?v:[]}catch(e){return[]}};
+  const putPending=v=>{try{localStorage.setItem(pendingKey,JSON.stringify(v));return true}catch(e){return false}};
+  const submissionTypes={
+   jobs:{title:'💼 İş İlanları',desc:'İş arayanlar veya personel arayan işletmeler için ilan öner.',fields:`${formField('İlan başlığı','newTitle','Örn. garson aranıyor','text',true)}${formField('İşletme / işveren','newMeta','İşletme adı')}${formField('İletişim (isteğe bağlı)','newContact','Telefon veya e-posta','text',true,false)}<label class="wide">İşin ayrıntıları<textarea id="newBody" required placeholder="İş tanımı, çalışma koşulları, başvuru bilgisi"></textarea></label>`},
+   lost:{title:'🔎 Kayıp ve Bulundu',desc:'Kayıp veya bulunan eşya için duyuru öner. Hassas kişisel bilgileri paylaşma.',fields:`<label>Durum<select id="newMeta"><option>Kayıp</option><option>Bulundu</option></select></label>${formField('Eşya / duyuru başlığı','newTitle','Örn. anahtar bulundu')}${formField('Yer / tarih (isteğe bağlı)','newContact','Yaklaşık yer veya tarih','text',true,false)}<label class="wide">Açıklama<textarea id="newBody" required placeholder="Eşyanın genel tarifi ve bulunma yeri"></textarea></label>`},
+   menus:{title:'🍽️ Dijital Menü ve Fiyatlar',desc:'Bir işletmenin menüsünü veya fiyatını yöneticinin incelemesi için gönder.',fields:`${formField('İşletme adı','newMeta','İşletme adı')}${formField('Ürün / yemek adı','newTitle','Ürün adı')}${formField('Fiyat (TL)','newPrice','Örn. 150','number',false,true)}<label class="wide">Menü ayrıntıları<textarea id="newBody" required placeholder="İçerik, porsiyon veya menü açıklaması"></textarea></label>`},
+   prices:{title:'💸 Fiyat Karşılaştırma',desc:'Karşılaştırmaya katkı için ürün ve fiyat bilgisi öner. Onaylanmamış fiyatlar yayımlanmaz.',fields:`${formField('Ürün / hizmet','newTitle','Ürün adı')}${formField('İşletme adı','newMeta','İşletme adı')}${formField('Fiyat (TL)','newPrice','Örn. 150','number',false,true)}<label class="wide">Fiyatın tarihi ve ayrıntıları<textarea id="newBody" required placeholder="Fiyatın görüldüğü tarih ve ürün bilgisi"></textarea></label>`},
+   ask:{title:'🙋 Erciş’e Sor',desc:'Yerel bir soru veya öneri gönder; bu sürümde gönderi onay bekleyen taslak olarak saklanır.',fields:`${formField('Soru başlığı','newTitle','Ne öğrenmek istiyorsun?','text',true)}${formField('Kategori (isteğe bağlı)','newMeta','Örn. ulaşım, eğitim, alışveriş','text',false,false)}<label class="wide">Ayrıntı<textarea id="newBody" required placeholder="Sorunu veya önerini açıkla"></textarea></label>`}
+  };
+  if(['jobs','lost','menus','prices','ask'].includes(k)){
+   const c=submissionTypes[k];
+   host.innerHTML=`<h3>${c.title}</h3><p>${c.desc}</p><form class="life-form" id="newSubmission">${c.fields}<div class="wide"><button class="life-action">Yönetici onayına gönder</button></div></form><div class="life-status" id="newStatus"></div><div class="life-note">Gönderiler önce onay bekleyen listesine kaydedilir. Bu tek dosyalık sürümde herkese açık yayımlama yapılmaz; gerçek yönetici onayı için sunucu ve yetkili yönetici hesabı gerekir.</div>`;
+   document.getElementById('newSubmission').addEventListener('submit',e=>{e.preventDefault();const entry={id:Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,8),type:k,title:document.getElementById('newTitle').value.trim(),meta:document.getElementById('newMeta')?.value.trim()||'',body:document.getElementById('newBody').value.trim(),contact:document.getElementById('newContact')?.value.trim()||'',price:document.getElementById('newPrice')?.value||'',status:'pending',createdAt:new Date().toISOString()};const arr=getPending();arr.push(entry);if(putPending(arr)){document.getElementById('newStatus').textContent='Kaydedildi: Yönetici onayı bekliyor. Gönderi yayımlanmadı.';e.currentTarget.reset()}else document.getElementById('newStatus').textContent='Tarayıcı depolamasına kaydedilemedi.';});return;
+  }
+  if(k==='pending'){
+   const arr=getPending().slice().reverse();host.innerHTML=`<h3>🛡️ Gönderi Durumu</h3><p>Bu cihazdan gönderdiğin içerikler.</p>${arr.length?arr.map(x=>`<article class="life-item"><b>${esc(x.title)}</b><small>${esc(submissionTypes[x.type]?.title||x.type)} · ${esc(x.createdAt?.slice(0,10)||'')} · <strong>Yönetici onayı bekliyor</strong></small><p>${esc(x.body)}</p>${x.price?`<p>Fiyat önerisi: ${esc(x.price)} TL</p>`:''}</article>`).join(''):'<p>Henüz gönderi yok.</p>'}<div class="life-note">Bu görünüm yalnızca bu cihazdaki gönderileri gösterir; gerçek yönetici paneli değildir.</div>`;return;
+  }
+  if(k==='transport'){
+   host.innerHTML=`<h3>🚌 Erciş Ulaşım Rehberi</h3><p>Güzergâh ve ulaşım aramaları</p><div class="life-form"><label>Ne arıyorsun?<select id="transportQuery"><option>Erciş şehir içi minibüs güzergâhları</option><option>Erciş otogar</option><option>Erciş Van otobüs seferleri</option><option>Erciş taksi durakları</option></select></label><button class="life-action" type="button" id="transportSearch">Haritada ara</button><a class="life-action" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Erciş+Van+otogar">Erciş otogarını aç ↗</a></div><div class="life-note">Güzergâh ve saatler değişebileceği için güncel bilgiyi ulaşım sağlayıcısından doğrula.</div>`;
+   document.getElementById('transportSearch').onclick=()=>window.open('https://www.google.com/maps/search/'+encodeURIComponent(document.getElementById('transportQuery').value+' Erciş Van'),'_blank','noopener');return;
+  }
+  if(k==='discover'){
+   host.innerHTML=`<h3>🏞️ Erciş’i Keşfet</h3><p>Erciş'teki yerleri haritada keşfet.</p><div class="life-form"><a class="life-action" target="_blank" rel="noopener" href="https://www.google.com/maps/search/gezilecek+yerler+Erciş+Van">Gezilecek yerleri keşfet ↗</a><a class="life-action" target="_blank" rel="noopener" href="https://www.google.com/maps/search/restoran+Erciş+Van">Yerel lezzetleri keşfet ↗</a><a class="life-action" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Van+Gölü+Erciş">Van Gölü kıyısını keşfet ↗</a></div>`;return;
+  }
+  if(k==='favorites'){
+   host.innerHTML=`<h3>❤️ Favorilerim</h3><p>İşletme kartlarındaki kalp simgesine dokunarak favori ekleyebilir veya çıkarabilirsin.</p><button type="button" class="life-action" id="showFavorites">Favori işletmeleri göster</button><div id="favoriteResults"></div>`;
+   document.getElementById('showFavorites').onclick=()=>{const rows=(typeof data!=='undefined'?data:[]).filter(x=>{try{return JSON.parse(localStorage.getItem('ercisRehberiFavorites')||'[]').includes(x[1])}catch(e){return false}});document.getElementById('favoriteResults').innerHTML=rows.length?rows.map(x=>`<div class="life-business-row"><div><b>${esc(x[1])}</b><small>${esc(x[0])} · ${esc(x[2]||'')}</small></div><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x[1]+' Erciş Van')}">Haritada aç ↗</a></div>`).join(''):'<p>Favoriler bu cihazda bulunamadı. İşletme kartlarındaki kalp simgesini kullan.</p>'};return;
+  }
+  const configs={
+   offers:{title:'🏷️ Erciş Fırsatları',desc:'Yerel indirim veya kampanya notu oluştur.',key:'offers',button:'Fırsatı cihazıma kaydet',empty:'Henüz fırsat eklenmedi.',fields:`${formField('Fırsat / kampanya adı','lifeTitle','Örn. hafta sonu indirimi', 'text',true)}${formField('İşletme adı','lifeMeta','İşletme adı')}${formField('Son geçerlilik tarihi','lifeDate','','date',false,false)}<label class="wide">Detay<textarea id="lifeBody" placeholder="İndirim koşulları ve açıklama" required></textarea></label>`},
+   events:{title:'📅 Etkinlik Takvimi',desc:'Erciş’teki etkinlikleri kişisel takvim listene ekle.',key:'events',button:'Etkinliği kaydet',empty:'Henüz etkinlik eklenmedi.',fields:`${formField('Etkinlik adı','lifeTitle','Etkinlik adı','text',true)}${formField('Tarih','lifeDate','','date')}${formField('Yer','lifeMeta','Etkinlik yeri') }<label class="wide">Açıklama<textarea id="lifeBody" placeholder="Saat, bilet bilgisi ve diğer ayrıntılar" required></textarea></label>`},
+   listings:{title:'🛍️ Yerel İlanlar & Alışveriş',desc:'Satılık, kiralık, aranan eşya veya hizmet ilanı taslağı oluştur.',key:'listings',button:'İlan taslağını kaydet',empty:'Henüz ilan taslağı yok.',fields:`<label>İlan türü<select id="lifeMeta"><option>Satılık</option><option>Kiralık</option><option>Alınıyor</option><option>Hizmet</option><option>Diğer</option></select></label>${formField('İlan başlığı','lifeTitle','Ne ilanı?')}${formField('İletişim (isteğe bağlı)','lifeContact','Telefon veya e-posta','text',true,false)}<label class="wide">Açıklama<textarea id="lifeBody" placeholder="Ürün veya hizmet hakkında bilgi" required></textarea></label>`},
+   notices:{title:'📣 Erciş Duyuruları',desc:'Kendin için bir duyuru taslağı kaydet veya listende tut.',key:'notices',button:'Duyuru taslağını kaydet',empty:'Henüz duyuru taslağı yok.',fields:`${formField('Duyuru başlığı','lifeTitle','Başlık','text',true)}${formField('Tarih','lifeDate','','date',false,false)}<label class="wide">Duyuru metni<textarea id="lifeBody" placeholder="Duyuru ayrıntıları" required></textarea></label>`}
+  };
+  const c=configs[k];if(!c)return;
+  host.innerHTML=`<h3>${c.title}</h3><p>${c.desc}</p><form class="life-form" id="lifeForm">${c.fields}<div class="wide"><button class="life-action">${c.button}</button></div></form><div class="life-status" id="lifeStatus"></div>${listCards(c.key,c.empty)}<div class="life-note">${note}</div>`;
+  document.getElementById('lifeForm').addEventListener('submit',e=>{e.preventDefault();const entry={title:document.getElementById('lifeTitle').value.trim(),meta:document.getElementById('lifeMeta')?.value||'',date:document.getElementById('lifeDate')?.value||'',body:document.getElementById('lifeBody').value.trim(),contact:document.getElementById('lifeContact')?.value.trim()||'',createdAt:new Date().toISOString()};const arr=getList(c.key);arr.push(entry);if(putList(c.key,arr)){document.getElementById('lifeStatus').textContent='Kaydedildi — yalnızca bu cihazda saklanıyor.';show(k)}else document.getElementById('lifeStatus').textContent='Tarayıcı depolaması kullanılamadı; kaydedilemedi.';});
+ }
+ document.querySelectorAll('[data-life]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-life]').forEach(x=>x.style.borderColor='');b.style.borderColor='#6d8df8';show(b.dataset.life);host.scrollIntoView({behavior:'smooth',block:'nearest'})}));
+ document.addEventListener('click',e=>{const card=e.target.closest('.card');if(!card)return;const name=card.querySelector('h3')?.textContent?.trim();if(!name)return;const arr=getList('popular');const found=arr.find(x=>x.name===name);if(found)found.count++;else arr.push({name,count:1});putList('popular',arr);});
+})();
+</script>
+
+
+<!-- Celal Yarıcı – Yeşil Erciş müzik çalar; oynatma kullanıcı isteğiyle başlar. -->
+<div class="music-dock" id="ercisMusicDock">
+  <section class="music-panel" id="ercisMusicPanel" aria-label="Müzik çalar" aria-hidden="true">
+    <div class="music-heading"><div><strong>🎵 Yeşil Erciş</strong><small>Celal Yarıcı</small></div><button class="music-close" id="ercisMusicClose" aria-label="Müzik panelini kapat">×</button></div>
+    <div class="music-video-wrap" id="ercisMusicVideo"><div style="height:100%;display:grid;place-items:center;color:#d3e4f5;font-size:13px;text-align:center;padding:12px">Dinlemek için “Çal” düğmesine bas.</div></div>
+    <div class="music-actions"><button type="button" id="ercisMusicPlay">▶ Çal</button><button type="button" id="ercisMusicMute">🔇 Sesi kapat</button></div>
+    <label class="music-volume" for="ercisMusicVolume"><span>🔉</span><input id="ercisMusicVolume" type="range" min="0" max="100" value="35" aria-label="Ses seviyesi"><output id="ercisMusicVolumeOut">35%</output></label>
+    <div class="music-status" id="ercisMusicStatus">Müzik yalnızca sen başlattığında çalar. Ses düzeyini buradan ayarlayabilirsin.</div>
+  </section>
+  <button class="music-toggle" id="ercisMusicToggle" type="button" aria-expanded="false" aria-controls="ercisMusicPanel"><span class="music-note">♫</span><span>Yeşil Erciş</span></button>
+</div>
+<script>
+(function(){
+ const panel=document.getElementById('ercisMusicPanel'),toggle=document.getElementById('ercisMusicToggle'),close=document.getElementById('ercisMusicClose');
+ const playBtn=document.getElementById('ercisMusicPlay'),muteBtn=document.getElementById('ercisMusicMute'),volume=document.getElementById('ercisMusicVolume'),volumeOut=document.getElementById('ercisMusicVolumeOut'),status=document.getElementById('ercisMusicStatus'),video=document.getElementById('ercisMusicVideo');
+ let player=null,apiReady=false,loading=false,playing=false,muted=false;
+ function panelOpen(open){panel.classList.toggle('open',open);panel.setAttribute('aria-hidden',String(!open));toggle.setAttribute('aria-expanded',String(open));}
+ toggle.addEventListener('click',()=>panelOpen(!panel.classList.contains('open')));close.addEventListener('click',()=>panelOpen(false));
+ function setStatus(t){status.textContent=t;}
+ function loadYouTubeApi(){return new Promise((resolve,reject)=>{if(window.YT&&window.YT.Player){resolve();return;}if(loading){let n=0;const timer=setInterval(()=>{if(window.YT&&window.YT.Player){clearInterval(timer);resolve();}else if(++n>100){clearInterval(timer);reject(new Error('YouTube yüklenemedi'));}},100);return;}loading=true;const old=window.onYouTubeIframeAPIReady;window.onYouTubeIframeAPIReady=function(){apiReady=true;if(typeof old==='function')old();resolve();};const script=document.createElement('script');script.src='https://www.youtube.com/iframe_api';script.onerror=()=>reject(new Error('YouTube API yüklenemedi'));document.head.appendChild(script);});}
+ async function start(){panelOpen(true);playBtn.disabled=true;setStatus('Müzik yükleniyor…');try{await loadYouTubeApi();if(!player){video.innerHTML='<div id="ercisYoutubePlayer"></div>';player=new YT.Player('ercisYoutubePlayer',{videoId:'NxvAoQKntk8',width:'100%',height:'100%',playerVars:{playsinline:1,rel:0},events:{onReady:e=>{e.target.setVolume(Number(volume.value));e.target.playVideo();},onStateChange:e=>{playing=e.data===YT.PlayerState.PLAYING;playBtn.textContent=playing?'⏸ Duraklat':'▶ Çal';if(playing)setStatus('Şimdi çalıyor · Ses düzeyini ayarlayabilirsin.');else if(e.data===YT.PlayerState.ENDED)setStatus('Parça sona erdi. Yeniden çalabilirsin.');},onError:()=>setStatus('Bu video oynatılamıyor olabilir. Paneldeki video üzerinden kontrol edebilirsin.')}});}else{player.playVideo();}setStatus('Video hazırlanıyor…');}catch(e){setStatus('Müzik yüklenemedi. İnternet bağlantısını kontrol et.');}finally{playBtn.disabled=false;}}
+ playBtn.addEventListener('click',()=>{if(!player||!playing){start();}else{player.pauseVideo();}});
+ volume.addEventListener('input',()=>{const v=Number(volume.value);volumeOut.value=v+'%';volumeOut.textContent=v+'%';if(player&&player.setVolume)player.setVolume(v);if(v>0&&muted){muted=false;if(player&&player.unMute)player.unMute();muteBtn.textContent='🔇 Sesi kapat';}});
+ muteBtn.addEventListener('click',()=>{muted=!muted;if(player){if(muted)player.mute();else{player.unMute();player.setVolume(Number(volume.value));}}muteBtn.textContent=muted?'🔊 Sesi aç':'🔇 Sesi kapat';setStatus(muted?'Ses kapalı.':'Ses açık.');});
+ try{const saved=localStorage.getItem('ercisMusicVolume');if(saved!==null){const v=Math.max(0,Math.min(100,Number(saved)||0));volume.value=v;volumeOut.value=v+'%';volumeOut.textContent=v+'%';}}catch(e){}
+ volume.addEventListener('change',()=>{try{localStorage.setItem('ercisMusicVolume',volume.value);}catch(e){}});
+})();
+</script>
+
+</body>
+</html>
